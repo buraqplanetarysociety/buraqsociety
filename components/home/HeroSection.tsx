@@ -16,14 +16,14 @@ import Image from 'next/image'
 const heroSlides = [
   {
     id: 1,
-    image: "/images/background-1.JPG", // Changed from .jpg to .JPG
+    image: "/images/background-1.jpg",
     title: 'Buraq Space Camp',
     subtitle: 'Empowering Tomorrow\'s Innovators and Problem Solvers',
     description: 'Join Pakistan\'s most innovative space education program. A week-long transformative journey in Islamabad, where future leaders are forged through innovation, collaboration and transformative learning.'
   },
   {
     id: 2,
-    image: "/images/background-2.JPG", // Changed from .jpg to .JPG
+    image: "/images/background-2.jpg",
     title: 'Innovation & Discovery',
     subtitle: 'Where Future Leaders Meet Innovation and Expertise',
     description: 'Engage in hands-on learning guided by leading academics and industry professionals. Build practical skills and leadership qualities that prepare you for success in STEM, business and beyond.'
