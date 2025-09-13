@@ -41,7 +41,7 @@ export default function FAQPage() {
               faqs={[
                 {
                   question: "What is the selection process?",
-                  answer: "Prospective cadets are required to fill out the registration form provided in the registration section. The Buraq Planetary Society then carefully reviews the applications and selects candidates who demonstrate the greatest potential to benefit from and contribute to the Buraq experience."
+                  answer: "Prospective cadets are required to fill out the registration form provided in the registration section. The Buraq Planetary Society then carefully reviews the applications and shortlists a set number of applicants for interviews. Finally, applicants who demonstrate the greatest potential to benefit from, and contribute to, the Buraq experience are selected"
                 },
                 {
                   question: "Why does Buraq have an age restriction?",
@@ -71,7 +71,7 @@ export default function FAQPage() {
                 },
                 {
                   question: "Will there be gender segregation?",
-                  answer: "Yes, gender segregation will be strictly maintained in tents and restroom facilities to ensure comfort and privacy for all cadets."
+                  answer: "Yes, gender segregation will be strictly maintained in Campsites and restroom facilities to ensure comfort and privacy for all cadets."
                 },
                 {
                   question: "How will cadets stay warm?",
@@ -99,10 +99,7 @@ export default function FAQPage() {
                   question: "Will there be exercise?",
                   answer: "Yes, morning exercise is a daily and mandatory part of the Buraq routine. All cadets are required to participate as it builds discipline and team spirit."
                 },
-                {
-                  question: "Are cadets required to sleep in tents?",
-                  answer: "Yes, sleeping in tents is a core aspect of the Buraq experience. It fosters camaraderie, self-reliance, and a connection with the outdoors, all of which are essential to the camp's goals."
-                },
+
                 {
                   question: "What do cadets do at Buraq?",
                   answer: "Buraq Camp offers a wide variety of space-themed lectures, activities, and workshops designed to empower young minds. These sessions are crafted to raise awareness about technology, global challenges, and modern innovation while also instilling vital life skills such as leadership, teamwork, time management, and creativity."

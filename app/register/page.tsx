@@ -15,8 +15,8 @@ interface TimeLeft {
 
 export default function RegisterPage() {
   // Deadline configuration - easily changeable
-  const DEADLINE_DATE = '2025-10-30T23:59:59';
-  const CAMP_DATE = '2025-12-28T23:59:59';
+  const DEADLINE_DATE = '2025-10-12T23:59:59';
+  const CAMP_DATE = '2025-10-12T23:59:59';
   
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     months: 0,
@@ -97,7 +97,7 @@ export default function RegisterPage() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="text-xl md:text-2xl font-medium mb-8 text-yellow-300"
               >
-                Deadline for registration is 30 October 2025
+                Deadline for registration is 12 October 2025
               </motion.h3>
               
               {/* Countdown Timer */}
@@ -209,7 +209,7 @@ export default function RegisterPage() {
             viewport={{ once: true }}
             className="text-lg md:text-xl text-[#040149] leading-relaxed mb-8"
           >
-            Candidates aged 14 to 17, as of December 27, are encouraged to apply for this prestigious opportunity to become part of our esteemed society. To submit your application, you may complete the form below, but for the best experience, please{" "}
+            Candidates aged 14 to 17, as of December 29th 2025, are encouraged to apply for this prestigious opportunity to become part of our esteemed society. To submit your application, you may complete the form below, but for the best experience, please{" "}
             <a 
               href="https://forms.gle/4n4emLJt8cRiteEs6" 
               target="_blank" 

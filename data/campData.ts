@@ -430,7 +430,7 @@ export const campYears: CampYear[] = [
         coverImage: '/images/gallery/2001/buraqCover2001.png',
         highlight: 'Camp 2001 Adventures',
         aboutCamp: {
-            heading: 'THE COLD THAT TAUGH ',
+            heading: 'THE COLD THAT TAUGHT ',
             paragraph: 'To truly understand the concept of fragility- not from textbooks, but through lived experience- one had to stand beneath a canopy of stars, breath visible in the freezing December air, surrounded by silence at the Buraq Space Camp. In 2001, Buraq returned to the cold, where its lessons hit deeper and its spirit felt alive once more.'
         },
         values: ['Perseverance ',' Conviction ',' Respect for Process'],

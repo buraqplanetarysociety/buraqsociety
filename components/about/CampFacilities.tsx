@@ -22,9 +22,9 @@ export default function CampFacilities({ variant = "light" }: CampFacilitiesProp
       icon: Tent,
       color: "bg-[#DBB13B]",
       items: [
-        "Grouped in 4, cadets reside in durable, all-weather waterproof tents",
+        "Grouped in 4, cadets reside in durable, all-weather waterproof Campsites",
         "Enhanced camaraderie and safety through shared living",
-        "Separate tents and restroom facilities for boys and girls"
+        "Separate Campsites and restroom facilities for boys and girls"
       ]
     },
     {
