@@ -135,7 +135,7 @@ export default function HeroSection() {
               >
                 <Globe className="w-8 h-8 text-[#DBB13B] mx-auto mb-3" />
                 <div className="text-4xl font-bold text-white mb-2">50+</div>
-                <div className="text-sm text-blue-200">Countries</div>
+                <div className="text-sm text-blue-200">Nations Connected Through Alumni</div>
               </motion.div>
               
               <motion.div
@@ -147,7 +147,7 @@ export default function HeroSection() {
               >
                 <Award className="w-8 h-8 text-[#DBB13B] mx-auto mb-3" />
                 <div className="text-4xl font-bold text-white mb-2">100+</div>
-                <div className="text-sm text-blue-200">Top Universities</div>
+                <div className="text-sm text-blue-200">Cadet Alumni in Top Universities</div>
               </motion.div>
             </div>
           </motion.div>

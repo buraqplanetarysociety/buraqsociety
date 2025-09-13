@@ -163,7 +163,7 @@ export default function AlumniReach() {
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
               <MapPin className="w-8 h-8 text-yellow-400 mx-auto mb-4" />
               <div className="text-3xl font-bold text-white mb-2">50+</div>
-              <div className="text-gray-300">Countries</div>
+              <div className="text-gray-300">Nations Connected Through Alumni</div>
             </div>
           </div>
         </motion.div>

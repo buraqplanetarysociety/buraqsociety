@@ -16,37 +16,26 @@ import Image from "next/image";
 
 const alumniVoices = [
   {
-    name: "Zara Malik",
+    name: "Natasha Khan",
     cohort: "2019",
     quote:
-      "Buraq didn't just teach me science; it taught me to think beyond boundaries and dream without limits.",
-    role: "Data Scientist at Google",
+      "When I joined Buraq Space Camp at age 16, I didn't realize I was stepping into one of the most transformative experiences of my life. It was a space where ambition, innovation, and leadership weren't just encouraged; they were expected. Over ten intense days, I was challenged in ways I could have never anticipated, mentally, physically, and emotionally. Early mornings, freezing nights, and constant challenges taught me resilience, teamwork, and grit, lessons no textbook could offer. I learned that real growth happens far outside your comfort zone. One of the most impactful aspects was engaging with Pakistani trailblazers, mentors from around the world who generously shared their journeys. Their insights sparked something in me: a realization that leadership is rooted in perspective and purpose, not age, and that obstacles often hold the greatest potential for growth. Surrounded by brilliant minds from across the country, I experienced what it means to collaborate with purpose and envision a future without boundaries. We weren't just exploring science, we were discovering the potential of who we could become. Buraq gave me clarity about the kind of person I want to be. It lit a spark that still drives me: to lead with purpose, give back meaningfully, and help shape a better future for Pakistan.",
+    role: "Alumni",
     rating: 5,
     avatar: "/images/Alumni and Legacy/uni image.png",
-    location: "San Francisco, USA",
-    achievement: "Published 15+ research papers",
+    location: "Pakistan",
+    achievement: "Transformative Leadership Journey",
   },
   {
-    name: "Hassan Ali",
+    name: "Wardah Rafaqat",
     cohort: "2020",
     quote:
-      "The connections I made at Buraq became my global network of innovators and changemakers.",
-    role: "Startup Founder",
+      "Attending the Buraq Space Camp was a turning point in my life. It was there that I first began to understand the power of having a clear purpose. Surrounded by passionate peers and mentors, I realized that direction gives meaning to effort. The camp encouraged me to think deeply about the kind of impact I wanted to have on the world. Through hands-on challenges and thought-provoking conversations, I learned the value of making intentional, thoughtful decisions. It wasn't just about rockets or space—it was about how we navigate our own lives with focus and courage. The ideas I encountered there opened my mind to new possibilities and helped me form a vision for my future. Even years later, the lessons I learned at camp continue to guide me. I often look back on that experience as one of the most influential in shaping who I am today. I am deeply grateful I had the opportunity to attend, and I carry that gratitude with me in everything I do.",
+    role: "Alumni",
     rating: 5,
     avatar: "/images/Alumni and Legacy/uni image(1).png",
-    location: "London, UK",
-    achievement: "Raised $2M in funding",
-  },
-  {
-    name: "Ayesha Siddiqui",
-    cohort: "2018",
-    quote:
-      "Buraq transformed my perspective on what's possible when passion meets purpose.",
-    role: "Medical Researcher",
-    rating: 5,
-    avatar: "/images/Alumni and Legacy/uni image(2).png",
-    location: "Toronto, Canada",
-    achievement: "Breakthrough in cancer research",
+    location: "Pakistan",
+    achievement: "Purpose-Driven Leadership",
   },
 ];
 

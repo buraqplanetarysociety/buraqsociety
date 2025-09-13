@@ -17,7 +17,7 @@ const notableAlumni = [
     bio: "Leading groundbreaking research in space exploration and planetary sciences at NASA's Jet Propulsion Laboratory. Her work on Mars rover missions has revolutionized our understanding of the Red Planet.",
     icon: Award,
     category: "Science",
-    company: "NASA JPL",
+    company: "NASA",
     rating: 5,
     achievements: ["Mars Mission Lead", "Published 50+ Papers", "NASA Excellence Award"]
   },
@@ -164,8 +164,7 @@ export default function NotableAlumni() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
                   <Card
-                    className="h-full bg-white/10 backdrop-blur-md border-white/20 hover:border-white/40 transition-all duration-500 cursor-pointer group hover:bg-white/15 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-3"
-                    onClick={() => setSelectedAlumni(selectedAlumni === index ? null : index)}
+                    className="h-full bg-white/10 backdrop-blur-md border-white/20 hover:border-white/40 transition-all duration-500 group hover:bg-white/15 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-3"
                   >
                     <CardContent className="p-6 relative overflow-hidden">
                       {/* Background Gradient */}
@@ -213,39 +212,7 @@ export default function NotableAlumni() {
                           ))}
                         </div> */}
 
-                        {/* Expandable Content */}
-                        <AnimatePresence>
-                          {selectedAlumni === index && (
-                            <motion.div
-                              initial={{ opacity: 0, height: 0 }}
-                              animate={{ opacity: 1, height: "auto" }}
-                              exit={{ opacity: 0, height: 0 }}
-                              transition={{ duration: 0.3 }}
-                              className="overflow-hidden"
-                            >
-                              <div className="border-t border-white/20 pt-4 mt-4">
-                                <p className="text-sm text-gray-300 text-center leading-relaxed mb-4">
-                                  {alumni.bio}
-                                </p>
-                                
-                                <div className="space-y-2">
-                                  <h4 className="text-sm font-semibold text-white text-center mb-2">Key Achievements</h4>
-                                  {alumni.achievements.map((achievement, i) => (
-                                    <div key={i} className="flex items-center justify-center gap-2">
-                                      <div className="w-1.5 h-1.5 bg-blue-400 rounded-full" />
-                                      <span className="text-xs text-gray-300">{achievement}</span>
-                                    </div>
-                                  ))}
-                                </div>
-                                
-                                <button className="mt-4 w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2 px-4 rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center gap-2">
-                                  <span>Learn More</span>
-                                  <ExternalLink className="w-3 h-3" />
-                                </button>
-                              </div>
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
+
                       </div>
                     </CardContent>
                   </Card>
@@ -275,8 +242,7 @@ export default function NotableAlumni() {
                       transition={{ duration: 0.6, delay: index * 0.1 }}
                     >
                       <Card
-                        className="h-full bg-white/10 backdrop-blur-md border-white/20 hover:border-white/40 transition-all duration-500 cursor-pointer group hover:bg-white/15 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-3"
-                        onClick={() => setSelectedAlumni(selectedAlumni === index ? null : index)}
+                        className="h-full bg-white/10 backdrop-blur-md border-white/20 hover:border-white/40 transition-all duration-500 group hover:bg-white/15 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-3"
                       >
                         <CardContent className="p-6 relative overflow-hidden">
                           {/* Background Gradient */}
@@ -317,41 +283,7 @@ export default function NotableAlumni() {
                               </Badge> */}
                             </div>
 
-                            {/* Expandable Content */}
-                            <AnimatePresence>
-                              {selectedAlumni === index && (
-                                <motion.div
-                                  initial={{ opacity: 0, height: 0 }}
-                                  animate={{ opacity: 1, height: "auto" }}
-                                  exit={{ opacity: 0, height: 0 }}
-                                  transition={{ duration: 0.3 }}
-                                  className="overflow-hidden"
-                                >
-                                  <div className="border-t border-white/20 pt-4 mt-4">
-                                    <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                                      {alumni.bio}
-                                    </p>
-                                    
-                                    <div className="space-y-2 mb-4">
-                                      <h4 className="text-white font-semibold text-sm">Key Achievements:</h4>
-                                      <ul className="space-y-1">
-                                        {alumni.achievements.map((achievement, i) => (
-                                          <li key={i} className="text-gray-300 text-xs flex items-center gap-2">
-                                            <div className="w-1 h-1 bg-blue-400 rounded-full" />
-                                            {achievement}
-                                          </li>
-                                        ))}
-                                      </ul>
-                                    </div>
 
-                                    <button className="mt-4 w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2 px-4 rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center gap-2">
-                                      <span>Learn More</span>
-                                      <ExternalLink className="w-3 h-3" />
-                                    </button>
-                                  </div>
-                                </motion.div>
-                              )}
-                            </AnimatePresence>
                           </div>
                         </CardContent>
                       </Card>

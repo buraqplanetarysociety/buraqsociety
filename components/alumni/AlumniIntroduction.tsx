@@ -5,8 +5,8 @@ import { Users, Globe, Award, TrendingUp } from "lucide-react";
 
 const stats = [
   { icon: Users, value: "700+", label: "Alumni Worldwide", color: "from-blue-500 to-cyan-500" },
-  { icon: Globe, value: "50+", label: "Countries", color: "from-purple-500 to-pink-500" },
-  { icon: Award, value: "100+", label: "Top Universities", color: "from-green-500 to-emerald-500" },
+  { icon: Globe, value: "50+", label: "Nations connected through Alumni", color: "from-purple-500 to-pink-500" },
+  { icon: Award, value: "100+", label: "Cadet Alumni in Top Universities", color: "from-green-500 to-emerald-500" },
   // { icon: TrendingUp, value: "95%", label: "Success Rate", color: "from-orange-500 to-red-500" },
 ];
 
