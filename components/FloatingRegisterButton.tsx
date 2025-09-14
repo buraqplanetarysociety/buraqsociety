@@ -1,9 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { UserPlus } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function FloatingRegisterButton() {
   return (
@@ -16,14 +15,15 @@ export default function FloatingRegisterButton() {
       whileTap={{ scale: 0.95 }}
     >
       <Link href="/register">
-        <Button
-          className="bg-[#040149] border-2 border-white text-white hover:bg-white hover:text-[#040149] px-6 py-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 group flex items-center space-x-2 text-lg font-semibold"
-          size="lg"
-        >
-          <UserPlus className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-          <span className="hidden sm:inline">Register Now</span>
-          <span className="sm:hidden">Register</span>
-        </Button>
+        <div className="cursor-pointer hover:scale-105 transition-transform duration-300 shadow-2xl hover:shadow-3xl rounded-lg overflow-hidden">
+          <Image
+            src="/images/floatingbutton-1.png"
+            alt="Register Now"
+            width={180}
+            height={120}
+            className="object-contain"
+          />
+        </div>
       </Link>
       
 

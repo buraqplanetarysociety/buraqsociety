@@ -45,7 +45,7 @@ export default function CountdownTimer({ targetDate, className = "" }: Countdown
   }, [targetDate])
 
   return (
-    <div className={`backdrop-blur-md bg-black/30 rounded-lg p-4 sm:p-6 ${className}`}>
+    <div className={`backdrop-blur-lg bg-white/10 rounded-xl p-4 sm:p-6 ${className}`}>
       <div className="flex justify-center items-center space-x-4 sm:space-x-8">
         <div className="text-center">
           <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">

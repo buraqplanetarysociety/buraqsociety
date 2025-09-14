@@ -56,7 +56,7 @@ const heroSlides: HeroSlide[] = [
   },
   {
     id: 0,
-    image: "/images/background-1.jpg",
+    image: "/images/background5.png",
     title: 'Buraq Society x OIC COMSTECH Presents',
     subtitle: '19th Buraq Space Camp',
     description: 'December 29th 2025 - January 5th 2026\nMission Begins In…',
