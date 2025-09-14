@@ -12,8 +12,28 @@ import {
 } from '@/components/ui/carousel'
 import { ChevronRight } from 'lucide-react'
 import Image from 'next/image'
+import CountdownTimer from '@/components/ui/countdown-timer'
 
-const heroSlides = [
+interface HeroSlide {
+  id: number
+  image: string
+  title: string
+  subtitle: string
+  description: string
+  isCountdown?: boolean
+  countdownTarget?: string
+}
+
+const heroSlides: HeroSlide[] = [
+  {
+    id: 0,
+    image: "/images/background-1.jpg",
+    title: '19th Camp Takeoff',
+    subtitle: 'December 29th 2025 - January 5th 2026',
+    description: 'Mission Begins In…',
+    isCountdown: true,
+    countdownTarget: '2025-12-29T00:00:00'
+  },
   {
     id: 1,
     image: "/images/background-1.jpg",
@@ -109,42 +129,70 @@ export default function HeroSection() {
                 />
                 <div className="absolute inset-0 bg-black/60" />
                 
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="container mx-auto px-4">
-                    <div className="max-w-4xl mx-auto text-center text-white">
-                      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight px-4">
+                {slide.isCountdown ? (
+                  // Countdown slide layout
+                  <div className="absolute inset-0 flex flex-col items-center justify-center">
+                    <div className="container mx-auto px-4 text-center text-white">
+                      <h1 className="text-2xl sm:text-3xl md:text-4xl font-medium mb-4 sm:mb-6 px-4">
                         {slide.title}
                       </h1>
                       
-                      <h2 className="text-lg sm:text-xl md:text-2xl font-medium mb-6 sm:mb-8 text-[#91b1ff] px-4">
+                      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 text-white px-4">
                         {slide.subtitle}
                       </h2>
                       
-                      <p className="text-base sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-10 max-w-3xl mx-auto opacity-90 px-4">
+                      <p className="text-2xl sm:text-3xl md:text-4xl font-medium mb-8 sm:mb-12 px-4">
                         {slide.description}
                       </p>
-                      
-                      <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
-                        <Button 
-                          size="lg"
-                          className="bg-white hover:bg-gray-100 text-[#304b78] hover:text-[#1e3a5f] px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl active:scale-95 group w-full sm:w-auto"
-                          onClick={() => window.open('https://forms.gle/ybzyH91YZZPKabVh6', '_blank')}
-                        >
-                          Apply Now
-                          <ChevronRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform duration-300 group-hover:translate-x-1" />
-                        </Button>
-                        <Button 
-                          variant="outline"
-                          size="lg"
-                          className="border-2 border-white hover:bg-white hover:border-white text-white hover:text-[#304b78] px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl active:scale-95 backdrop-blur-sm bg-white/10 w-full sm:w-auto"
-                          onClick={() => window.location.href = '/about#timeline'}
-                        >
-                          Watch Our Story
-                        </Button>
+                    </div>
+                    
+                    {/* Countdown timer positioned at bottom */}
+                    <div className="absolute bottom-8 sm:bottom-16 left-1/2 transform -translate-x-1/2 w-full max-w-2xl px-4">
+                      <CountdownTimer 
+                        targetDate={slide.countdownTarget!} 
+                        className="mx-auto"
+                      />
+                    </div>
+                  </div>
+                ) : (
+                  // Regular slide layout
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="container mx-auto px-4">
+                      <div className="max-w-4xl mx-auto text-center text-white">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight px-4">
+                          {slide.title}
+                        </h1>
+                        
+                        <h2 className="text-lg sm:text-xl md:text-2xl font-medium mb-6 sm:mb-8 text-[#91b1ff] px-4">
+                          {slide.subtitle}
+                        </h2>
+                        
+                        <p className="text-base sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-10 max-w-3xl mx-auto opacity-90 px-4">
+                          {slide.description}
+                        </p>
+                        
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
+                          <Button 
+                            size="lg"
+                            className="bg-white hover:bg-gray-100 text-[#304b78] hover:text-[#1e3a5f] px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl active:scale-95 group w-full sm:w-auto"
+                            onClick={() => window.open('https://forms.gle/ybzyH91YZZPKabVh6', '_blank')}
+                          >
+                            Apply Now
+                            <ChevronRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                          </Button>
+                          <Button 
+                            variant="outline"
+                            size="lg"
+                            className="border-2 border-white hover:bg-white hover:border-white text-white hover:text-[#304b78] px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl active:scale-95 backdrop-blur-sm bg-white/10 w-full sm:w-auto"
+                            onClick={() => window.location.href = '/about#timeline'}
+                          >
+                            Watch Our Story
+                          </Button>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                )}
               </div>
             </CarouselItem>
           ))}
