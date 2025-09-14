@@ -207,7 +207,7 @@ export default function Footer() {
 
             {/* Newsletter Signup - Desktop Only */}
             <div className="space-y-4 hidden lg:block">
-              <h3 className="text-xl font-semibold text-white">
+              {/* <h3 className="text-xl font-semibold text-white">
                 Stay Connected
               </h3>
               <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
@@ -218,7 +218,7 @@ export default function Footer() {
                 <Button className="bg-gradient-to-r from-[#DBB13B] to-[#f4d03f] hover:from-[#f4d03f] hover:to-[#DBB13B] text-black font-semibold px-6 shadow-lg hover:shadow-xl transition-all duration-300 flex-shrink-0">
                   <Send className="w-4 h-4" />
                 </Button>
-              </div>
+              </div> */}
             </div>
 
  

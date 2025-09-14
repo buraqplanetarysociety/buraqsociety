@@ -59,7 +59,7 @@ export default function GalleryPage() {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="mt-8 flex gap-4"
             >
-              <div className="bg-[#DBB13B] text-[#040149] px-6 py-2 rounded-full font-semibold text-sm">
+              <div className="bg-white/20 backdrop-blur-sm text-white px-6 py-2 rounded-full font-semibold text-sm">
                 {campYears.length} Years of Excellence
               </div>
               <div className="bg-white/20 backdrop-blur-sm text-white px-6 py-2 rounded-full font-semibold text-sm">
