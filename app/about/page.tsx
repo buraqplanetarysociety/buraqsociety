@@ -1,5 +1,6 @@
 import React from "react";
 import AboutHero from "@/components/about/AboutHero";
+import ComstechPartnership from "@/components/about/ComstechPartnership";
 import WhatIsBuraq from "@/components/about/WhatIsBuraq";
 import MissionValues from "@/components/about/MissionValues";
 import WhereItAllBegan from "@/components/about/WhereItAllBegan";
@@ -13,6 +14,7 @@ export default function page() {
     <>
       <div className="w-full flex flex-col">
         <AboutHero />
+        <ComstechPartnership variant="light" />
         <WhatIsBuraq variant="light" />
         <WhereItAllBegan variant="dark" />
         <MissionValues variant="light" />

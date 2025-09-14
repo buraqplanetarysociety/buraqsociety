@@ -19,10 +19,10 @@ const alumniVoices = [
     name: "Natasha Khan",
     cohort: "2019",
     quote:
-      "When I joined Buraq Space Camp at age 16, I didn't realize I was stepping into one of the most transformative experiences of my life. It was a space where ambition, innovation, and leadership weren't just encouraged; they were expected. Over ten intense days, I was challenged in ways I could have never anticipated, mentally, physically, and emotionally. Early mornings, freezing nights, and constant challenges taught me resilience, teamwork, and grit, lessons no textbook could offer. I learned that real growth happens far outside your comfort zone. One of the most impactful aspects was engaging with Pakistani trailblazers, mentors from around the world who generously shared their journeys. Their insights sparked something in me: a realization that leadership is rooted in perspective and purpose, not age, and that obstacles often hold the greatest potential for growth. Surrounded by brilliant minds from across the country, I experienced what it means to collaborate with purpose and envision a future without boundaries. We weren't just exploring science, we were discovering the potential of who we could become. Buraq gave me clarity about the kind of person I want to be. It lit a spark that still drives me: to lead with purpose, give back meaningfully, and help shape a better future for Pakistan.",
+      "When I joined Buraq Space Camp at age 16, I didn&apos;t realize I was stepping into one of the most transformative experiences of my life. It was a space where ambition, innovation, and leadership weren’t just encouraged; they were expected. Over ten intense days, I was challenged in ways I could have never anticipated, mentally, physically, and emotionally. Early mornings, freezing nights, and constant challenges taught me resilience, teamwork, and grit, lessons no textbook could offer. I learned that real growth happens far outside your comfort zone. One of the most impactful aspects was engaging with Pakistani trailblazers, mentors from around the world who generously shared their journeys. Their insights sparked something in me: a realization that leadership is rooted in perspective and purpose, not age, and that obstacles often hold the greatest potential for growth. Surrounded by brilliant minds from across the country, I experienced what it means to collaborate with purpose and envision a future without boundaries. We weren&apos;t just exploring science, we were discovering the potential of who we could become. Buraq gave me clarity about the kind of person I want to be. It lit a spark that still drives me: to lead with purpose, give back meaningfully, and help shape a better future for Pakistan.",
     role: "Alumni",
     rating: 5,
-    avatar: "/images/Alumni and Legacy/uni image.png",
+    avatar: "/images/AlumniVoices/natashakhan.jpg",
     location: "Pakistan",
     achievement: "Transformative Leadership Journey",
   },
@@ -30,10 +30,10 @@ const alumniVoices = [
     name: "Wardah Rafaqat",
     cohort: "2020",
     quote:
-      "Attending the Buraq Space Camp was a turning point in my life. It was there that I first began to understand the power of having a clear purpose. Surrounded by passionate peers and mentors, I realized that direction gives meaning to effort. The camp encouraged me to think deeply about the kind of impact I wanted to have on the world. Through hands-on challenges and thought-provoking conversations, I learned the value of making intentional, thoughtful decisions. It wasn't just about rockets or space—it was about how we navigate our own lives with focus and courage. The ideas I encountered there opened my mind to new possibilities and helped me form a vision for my future. Even years later, the lessons I learned at camp continue to guide me. I often look back on that experience as one of the most influential in shaping who I am today. I am deeply grateful I had the opportunity to attend, and I carry that gratitude with me in everything I do.",
+      "Attending the Buraq Space Camp was a turning point in my life. It was there that I first began to understand the power of having a clear purpose. Surrounded by passionate peers and mentors, I realized that direction gives meaning to effort. The camp encouraged me to think deeply about the kind of impact I wanted to have on the world. Through hands-on challenges and thought-provoking conversations, I learned the value of making intentional, thoughtful decisions. It wasn’t just about rockets or space—it was about how we navigate our own lives with focus and courage. The ideas I encountered there opened my mind to new possibilities and helped me form a vision for my future. Even years later, the lessons I learned at camp continue to guide me. I often look back on that experience as one of the most influential in shaping who I am today. I am deeply grateful I had the opportunity to attend, and I carry that gratitude with me in everything I do.",
     role: "Alumni",
     rating: 5,
-    avatar: "/images/Alumni and Legacy/uni image(1).png",
+    avatar: "/images/AlumniVoices/wardahrafaqat.jpg",
     location: "Pakistan",
     achievement: "Purpose-Driven Leadership",
   },
@@ -144,11 +144,12 @@ export default function AlumniVoices() {
               whileHover={{ scale: 1.1 }}
             >
               <Image
-                src={alumniVoices[currentVoice].avatar}
-                alt={alumniVoices[currentVoice].name}
-                fill
-                className="object-cover"
-              />
+  src={alumniVoices[currentVoice].avatar}
+  alt={alumniVoices[currentVoice].name}
+  fill
+  className="object-cover object-top"
+  priority
+/>
             </motion.div>
 
             <div className="flex-1 min-w-0 text-center sm:text-left">
