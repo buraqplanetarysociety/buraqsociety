@@ -12,35 +12,35 @@ const Timeline = ({ variant = "light" }: TimelineProps) => {
   const timelineEvents = [
     {
       year: "1994",
-      title: "First year of buraq",
+      title: "Buraq's Birth",
       description: "Inspired by a visit to Uzbekistan's space camp, Dr. Shahid Mahmud and Mr. Sameer Qureshi launch the first Buraq Space Camp in Murree, adapting the model for Pakistani students. The initiative quickly gains momentum, and by the end of the year, three cadets are selected to attend the Uzbekistan Space Camp — earning Buraq international recognition in its very first year.",
       image: "/images/timeline-1.jpg",
       side: "left"
     },
     {
       year: "2003",
-      title: "First break",
+      title: "First Break",
       description: "Buraq faced its first major setback. Dr. Shahid Mahmud observed that many students attended merely in pursuit of recommendation letters, with little regard for the values Buraq aimed to instill. The spirit of teamwork had diminished, as the 'Best Buraqian' award fostered individual competition. In response, he chose to pause the program.",
       image: "/images/timeline-2.jpg",
       side: "right"
     },
     {
       year: "2012",
-      title: "Resume",
+      title: "Resumption",
       description: "Buraq was revived by Anushay Mahmud, daughter of Dr. Shahid Mahmud, after alumni shared how the camp had changed their lives. She removed the 'Best Buraqian' award to foster teamwork, introduced hands-on learning, and expanded subjects beyond space and physics. Many former Buraqians offered their time and support to help bring the camp back to life. And so, Buraq was reshaped into the collaborative and transformative experience it is known as today.",
       image: "/images/timeline-3.jpg",
       side: "left"
     },
     {
       year: "2020",
-      title: "The COVID break",
+      title: "The COVID Break",
       description: "In light of the global pandemic, Buraq made the difficult decision to pause operations for the safety of all involved. While the world adapted to new norms, so did Buraq — using the break to reassess, reflect, and further strengthen its vision for the future. The spirit of Buraq remained alive in its growing alumni community, which continued to stay connected virtually.",
       image: "/images/timeline-4.jpg",
       side: "right"
     },
     {
       year: "2023",
-      title: "Back and better",
+      title: "Back & Better",
       description: "After the pandemic-induced break, the Buraq team used this time to reflect and refine the camp experience. Upon resumption in 2023, the structure was significantly enhanced: traditional lecture formats were reduced, making way for more STEM-focused activities, interactive discussions, and hands-on learning. The camp returned with renewed energy — more dynamic, immersive, and aligned with modern learning needs.",
       image: "/images/timeline-5.jpg",
       side: "left"

@@ -128,7 +128,7 @@ export default function HeroSection() {
                         <Button 
                           size="lg"
                           className="bg-white hover:bg-gray-100 text-[#304b78] hover:text-[#1e3a5f] px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl active:scale-95 group w-full sm:w-auto"
-                          onClick={() => scrollToSection('contact')}
+                          onClick={() => window.open('https://forms.gle/ybzyH91YZZPKabVh6', '_blank')}
                         >
                           Apply Now
                           <ChevronRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -137,7 +137,7 @@ export default function HeroSection() {
                           variant="outline"
                           size="lg"
                           className="border-2 border-white hover:bg-white hover:border-white text-white hover:text-[#304b78] px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl active:scale-95 backdrop-blur-sm bg-white/10 w-full sm:w-auto"
-                          onClick={() => scrollToSection('experience')}
+                          onClick={() => window.location.href = '/about#timeline'}
                         >
                           Watch Our Story
                         </Button>

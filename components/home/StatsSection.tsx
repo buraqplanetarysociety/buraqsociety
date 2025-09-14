@@ -23,9 +23,9 @@ const stats = [
   },
   {
     icon: Globe,
-    number: 25,
+    number: 50,
     suffix: '+',
-    label: 'Countries Reached',
+    label: 'Global Cadet Footprint',
     description: 'Global alumni presence',
     color: 'from-purple-400 to-purple-600 dark:from-purple-300 dark:to-purple-500'
   },

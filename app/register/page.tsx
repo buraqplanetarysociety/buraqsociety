@@ -211,7 +211,7 @@ export default function RegisterPage() {
           >
             Candidates aged 14 to 17, as of December 29th 2025, are encouraged to apply for this prestigious opportunity to become part of our esteemed society. To submit your application, you may complete the form below, but for the best experience, please{" "}
             <a 
-              href="https://forms.gle/4n4emLJt8cRiteEs6" 
+              href="https://forms.gle/ybzyH91YZZPKabVh6" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-blue-600 hover:text-blue-800 underline font-semibold"
@@ -238,7 +238,7 @@ export default function RegisterPage() {
               className="bg-gray-50 rounded-2xl p-4 shadow-lg"
             >
               <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLScfnKniMwktax6MaPvdI6ZMeJfOP15u0yhznxiODS5wOjGDqw/viewform?embedded=true"
+                src="https://docs.google.com/forms/d/e/1FAIpQLSfyH91YZZPKabVh6/viewform?embedded=true"
                 width="100%"
                 height="800"
                 frameBorder="0"
