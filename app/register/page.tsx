@@ -238,9 +238,9 @@ export default function RegisterPage() {
               className="bg-gray-50 rounded-2xl p-4 shadow-lg"
             >
               <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSfyH91YZZPKabVh6/viewform?embedded=true"
+                src="https://docs.google.com/forms/d/e/1FAIpQLSf_Rpuo4F48Wupn41E_T0nl_T4l74_AIGowX9fa2H1l3H5qcg/viewform?embedded=true"
                 width="100%"
-                height="800"
+                height="3000"
                 frameBorder="0"
                 marginHeight={0}
                 marginWidth={0}
@@ -249,8 +249,6 @@ export default function RegisterPage() {
               >
                 Loading…
               </iframe>
-              
-    
             </motion.div>
           </div>
         </section>
