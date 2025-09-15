@@ -101,48 +101,43 @@ export default function RegisterPage() {
               </motion.h3>
               
               {/* Countdown Timer */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-                className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto"
-              >
-                <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-                  <CardContent className="p-4 text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-yellow-300">
-                      {timeLeft.months}
-                    </div>
-                    <div className="text-sm md:text-base text-white/80">Months</div>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-                  <CardContent className="p-4 text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-yellow-300">
-                      {timeLeft.days}
-                    </div>
-                    <div className="text-sm md:text-base text-white/80">Days</div>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-                  <CardContent className="p-4 text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-yellow-300">
-                      {timeLeft.hours}
-                    </div>
-                    <div className="text-sm md:text-base text-white/80">Hours</div>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-                  <CardContent className="p-4 text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-yellow-300">
-                      {timeLeft.minutes}
-                    </div>
-                    <div className="text-sm md:text-base text-white/80">Minutes</div>
-                  </CardContent>
-                </Card>
-              </motion.div>
+<motion.div
+  initial={{ opacity: 0, scale: 0.8 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.8, delay: 0.6 }}
+  className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl max-w-2xl mx-auto"
+>
+  <div className="grid grid-cols-2 md:grid-cols-4 p-4 divide-x-2 divide-white/50">
+    <div className="text-center px-4">
+      <div className="text-3xl md:text-4xl font-bold text-yellow-300">
+        {timeLeft.months}
+      </div>
+      <div className="text-sm md:text-base text-white/80">Months</div>
+    </div>
+
+    <div className="text-center px-4">
+      <div className="text-3xl md:text-4xl font-bold text-yellow-300">
+        {timeLeft.days}
+      </div>
+      <div className="text-sm md:text-base text-white/80">Days</div>
+    </div>
+
+    <div className="text-center px-4">
+      <div className="text-3xl md:text-4xl font-bold text-yellow-300">
+        {timeLeft.hours}
+      </div>
+      <div className="text-sm md:text-base text-white/80">Hours</div>
+    </div>
+
+    <div className="text-center px-4">
+      <div className="text-3xl md:text-4xl font-bold text-yellow-300">
+        {timeLeft.minutes}
+      </div>
+      <div className="text-sm md:text-base text-white/80">Minutes</div>
+    </div>
+  </div>
+</motion.div>
+
               
               {/* Camp countdown label */}
               <motion.p

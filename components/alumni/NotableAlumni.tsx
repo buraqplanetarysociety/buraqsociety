@@ -12,7 +12,7 @@ const notableAlumni = [
   {
     name: "Dr. Sarah Ahmed",
     achievement: "NASA Scientist",
-    cohort: "2015",
+    batch: "2015",
     photo: "/images/Alumni and Legacy/uni image.png",
     bio: "Leading groundbreaking research in space exploration and planetary sciences at NASA's Jet Propulsion Laboratory. Her work on Mars rover missions has revolutionized our understanding of the Red Planet.",
     icon: Award,
@@ -24,7 +24,7 @@ const notableAlumni = [
   {
     name: "Ahmed Hassan",
     achievement: "Tech Entrepreneur",
-    cohort: "2017",
+    batch: "2017",
     photo: "/images/Alumni and Legacy/uni image(1).png",
     bio: "Founded a revolutionary AI startup focused on healthcare diagnostics that was acquired by Google for $50M. Now leading AI initiatives at Google Health, impacting millions of lives globally.",
     icon: Briefcase,
@@ -36,7 +36,7 @@ const notableAlumni = [
   {
     name: "Fatima Khan",
     achievement: "Medical Researcher",
-    cohort: "2016",
+    batch: "2016",
     photo: "/images/Alumni and Legacy/uni image(2).png",
     bio: "Breakthrough research in cancer treatment at Johns Hopkins University. Her innovative immunotherapy approach has shown remarkable results in clinical trials, offering new hope to patients worldwide.",
     icon: GraduationCap,
@@ -48,7 +48,7 @@ const notableAlumni = [
   {
     name: "Ali Raza",
     achievement: "Climate Scientist",
-    cohort: "2018",
+    batch: "2018",
     photo: "/images/Alumni and Legacy/uni image(3).png",
     bio: "Leading climate change research and policy development at the United Nations. His work on sustainable development goals has influenced global climate policies and environmental protection strategies.",
     icon: Globe,
@@ -198,7 +198,7 @@ export default function NotableAlumni() {
                         {/* Badges */}
                         <div className="flex justify-center gap-2 mb-4">
                           <Badge className="bg-white/20 text-white border-white/30">
-                            Cohort {alumni.cohort}
+                            Batch {alumni.batch}
                           </Badge>
                           {/* <Badge className="bg-gradient-to-r from-blue-500 to-purple-500 text-white border-0">
                             {alumni.category}
@@ -276,7 +276,7 @@ export default function NotableAlumni() {
                             {/* Badges */}
                             <div className="flex justify-center gap-2 mb-4">
                               <Badge className="bg-white/20 text-white border-white/30">
-                                Cohort {alumni.cohort}
+                                batch {alumni.batch}
                               </Badge>
                               {/* <Badge className="bg-gradient-to-r from-blue-500 to-purple-500 text-white border-0">
                                 {alumni.category}

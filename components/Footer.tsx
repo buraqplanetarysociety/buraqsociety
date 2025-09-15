@@ -469,7 +469,7 @@ export default function Footer() {
           viewport={{ once: true }}
         >
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            © 2024 Buraq Space Camp. All rights reserved.
+            © 2025 Buraq Space Camp. All rights reserved.
           </p>
           {/* <div className="flex space-x-6">
             {["Terms of Service", "Privacy Policy", "Support"].map((item) => (

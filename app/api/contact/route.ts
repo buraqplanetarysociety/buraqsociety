@@ -5,7 +5,7 @@ export async function POST(request: NextRequest) {
   try {
     const { name, contact, message } = await request.json();
 
-    // Validate required fields
+    // ✅ Validate required fields
     if (!name || !contact || !message) {
       return NextResponse.json(
         { error: 'All fields are required' },
@@ -13,20 +13,20 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Create transporter using Gmail SMTP
-    // Note: In production, use environment variables for credentials
+    // ✅ Create transporter (use env vars in production)
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: process.env.EMAIL_USER || 'your-email@gmail.com',
-        pass: process.env.EMAIL_PASS || 'your-app-password',
+        user: process.env.EMAIL_USER, // e.g. your Gmail
+        pass: process.env.EMAIL_PASS, // App password if 2FA
       },
     });
 
-    // Email content
+    // ✅ Email content
     const mailOptions = {
-      from: process.env.EMAIL_USER || 'your-email@gmail.com',
-      to: 'anushay@buraqsociety.org',
+      from: process.env.EMAIL_USER,
+      // to: 'anushay@buraqsociety.org',
+      to: 'hammad@fastnexa.com',
       subject: 'Question from Buraq Society Website',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -52,17 +52,14 @@ export async function POST(request: NextRequest) {
       `,
     };
 
-    // Send email
+    // ✅ Send email
     await transporter.sendMail(mailOptions);
 
-    return NextResponse.json(
-      { message: 'Email sent successfully' },
-      { status: 200 }
-    );
-  } catch (error) {
+    return NextResponse.json({ message: 'Email sent successfully' }, { status: 200 });
+  } catch (error: any) {
     console.error('Error sending email:', error);
     return NextResponse.json(
-      { error: 'Failed to send email' },
+      { error: 'Failed to send email', details: error.message },
       { status: 500 }
     );
   }

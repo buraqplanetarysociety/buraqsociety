@@ -15,7 +15,7 @@ export default function FloatingRegisterButton() {
       whileTap={{ scale: 0.95 }}
     >
       <Link href="/register">
-        <div className="cursor-pointer hover:scale-105 transition-transform duration-300 shadow-2xl hover:shadow-3xl rounded-lg overflow-hidden">
+        <div className="cursor-pointer hover:scale-105 transition-transform duration-300 hover:shadow-3xl rounded-lg overflow-hidden">
           <Image
             src="/images/floatingbutton-1.png"
             alt="Register Now"

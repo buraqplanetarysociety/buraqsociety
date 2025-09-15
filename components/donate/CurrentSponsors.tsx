@@ -10,7 +10,7 @@ export default function CurrentSponsors() {
     { name: "Eikon 7", logo: "/images/Donate/eikon 7 logo.png" },
     { name: "ProPakistani", logo: "/images/Donate/ProPakistani_Logo.png" },
     { name: "Nutshell", logo: "/images/Donate/nutshell.png" },
-    { name: "Aylo", logo: "/images/Donate/Aylo logo.png" },
+    { name: "Aylo", logo: "/images/Donate/aylo-1.png" },
     { name: "ONE", logo: "/images/Donate/one.png" },
     { name: "The Black Hole", logo: "/images/Donate/the black hole.png" },
   ];

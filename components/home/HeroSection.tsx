@@ -25,6 +25,15 @@ interface HeroSlide {
 }
 
 const heroSlides: HeroSlide[] = [
+  {
+    id: 0,
+    image: "/images/background5.png",
+    title: 'Buraq Society x OIC COMSTECH Presents',
+    subtitle: '19th Buraq Space Camp',
+    description: 'December 29th 2025 - January 5th 2026\nMission Begins In…',
+    isCountdown: true,
+    countdownTarget: '2025-12-29T00:00:00'
+  },
   
   {
     id: 1,
@@ -53,15 +62,6 @@ const heroSlides: HeroSlide[] = [
     title: 'Global Network',
     subtitle: 'Connect with a Community of Leaders and Innovators',
     description: 'Become part of a prestigious alumni network that includes top executives, leading scientists, and industry pioneers. Build meaningful connections with professionals and organizations across sectors — opening doors to academic, research, and career opportunities worldwide.'
-  },
-  {
-    id: 0,
-    image: "/images/background5.png",
-    title: 'Buraq Society x OIC COMSTECH Presents',
-    subtitle: '19th Buraq Space Camp',
-    description: 'December 29th 2025 - January 5th 2026\nMission Begins In…',
-    isCountdown: true,
-    countdownTarget: '2025-12-29T00:00:00'
   }
 ];
 
@@ -142,13 +142,17 @@ export default function HeroSection() {
                         {slide.subtitle}
                       </h2>
                       
-                      <div className="text-xl sm:text-2xl md:text-3xl font-medium mb-8 sm:mb-12 px-4">
-                        {slide.description.split('\n').map((line, index) => (
-                          <p key={index} className={index === 0 ? 'mb-2' : ''}>
-                            {line}
-                          </p>
-                        ))}
-                      </div>
+                      <div className="text-[#91b1ff] text-xl sm:text-2xl md:text-3xl font-medium mb-8 sm:mb-12 px-4">
+  {slide.description.split('\n').map((line, index) => (
+    <p
+      key={index}
+      className={`${index === 0 ? 'mb-2' : ''} ${index === 1 ? 'text-white' : ''}`}
+    >
+      {line}
+    </p>
+  ))}
+</div>
+
                     </div>
                     
                     {/* Countdown timer positioned at bottom */}

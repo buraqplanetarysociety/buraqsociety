@@ -48,43 +48,43 @@ export default function CountdownTimer({ targetDate, className = "" }: Countdown
     <div className={`backdrop-blur-lg bg-white/10 rounded-xl p-4 sm:p-6 ${className}`}>
       <div className="flex justify-center items-center space-x-4 sm:space-x-8">
         <div className="text-center">
-          <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
+          <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#FDE047]">
             {timeLeft.days.toString().padStart(2, '0')}
           </div>
-          <div className="text-xs sm:text-sm text-white/80 uppercase tracking-wider">
+          <div className="text-xs sm:text-sm text-white uppercase tracking-wider">
             Days
           </div>
         </div>
         
-        <div className="text-white/60 text-xl sm:text-2xl font-bold">|</div>
+        <div className="text-white text-xl sm:text-2xl font-bold">|</div>
         
         <div className="text-center">
-          <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
+          <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#FDE047]">
             {timeLeft.hours.toString().padStart(2, '0')}
           </div>
-          <div className="text-xs sm:text-sm text-white/80 uppercase tracking-wider">
+          <div className="text-xs sm:text-sm text-white uppercase tracking-wider">
             Hours
           </div>
         </div>
         
-        <div className="text-white/60 text-xl sm:text-2xl font-bold">|</div>
+        <div className="text-white text-xl sm:text-2xl font-bold">|</div>
         
         <div className="text-center">
-          <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
+          <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#FDE047]">
             {timeLeft.minutes.toString().padStart(2, '0')}
           </div>
-          <div className="text-xs sm:text-sm text-white/80 uppercase tracking-wider">
+          <div className="text-xs sm:text-sm text-white uppercase tracking-wider">
             Minutes
           </div>
         </div>
         
-        <div className="text-white/60 text-xl sm:text-2xl font-bold">|</div>
+        <div className="text-white text-xl sm:text-2xl font-bold">|</div>
         
         <div className="text-center">
-          <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
+          <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#FDE047]">
             {timeLeft.seconds.toString().padStart(2, '0')}
           </div>
-          <div className="text-xs sm:text-sm text-white/80 uppercase tracking-wider">
+          <div className="text-xs sm:text-sm text-white uppercase tracking-wider">
             Seconds
           </div>
         </div>
