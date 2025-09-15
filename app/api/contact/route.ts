@@ -25,8 +25,7 @@ export async function POST(request: NextRequest) {
     // ✅ Email content
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      // to: 'anushay@buraqsociety.org',
-      to: 'hammad@fastnexa.com',
+      to: 'anushay@buraqsociety.org',
       subject: 'Question from Buraq Society Website',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
