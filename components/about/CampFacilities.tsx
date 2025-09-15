@@ -18,11 +18,11 @@ export default function CampFacilities({ variant = "light" }: CampFacilitiesProp
   const isDark = variant === "dark";
   const facilities = [
     {
-      title: "Outdoor Living Setup",
+      title: "Living Setup",
       icon: Tent,
       color: "bg-[#DBB13B]",
       items: [
-        "Grouped in 4, cadets reside in durable, all-weather waterproof Campsites",
+        "Grouped in 4, cadets reside in a state of the art campsite",
         "Enhanced camaraderie and safety through shared living",
         "Separate Campsites and restroom facilities for boys and girls"
       ]
