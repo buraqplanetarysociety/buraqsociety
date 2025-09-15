@@ -1,10 +1,11 @@
-"use client"
+"use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ExternalLink, Calendar, Clock } from "lucide-react";
 import Image from "next/image";
+import CountdownTimer from "@/components/ui/countdown-timer";
 
 interface TimeLeft {
   months: number;
@@ -15,33 +16,39 @@ interface TimeLeft {
 
 export default function RegisterPage() {
   // Deadline configuration - easily changeable
-  const DEADLINE_DATE = '2025-10-12T23:59:59';
-  const CAMP_DATE = '2025-10-12T23:59:59';
-  
+  const DEADLINE_DATE = "2025-10-12T23:59:59";
+  const CAMP_DATE = "2025-10-12T23:59:59";
+
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     months: 0,
     days: 0,
     hours: 0,
-    minutes: 0
+    minutes: 0,
   });
   const [isDeadlinePassed, setIsDeadlinePassed] = useState(false);
 
   useEffect(() => {
     const deadline = new Date(DEADLINE_DATE);
     const campDate = new Date(CAMP_DATE);
-    
+
     const calculateTimeLeft = () => {
       const now = new Date();
       const deadlineDifference = deadline.getTime() - now.getTime();
       const campDifference = campDate.getTime() - now.getTime();
-      
+
       if (deadlineDifference > 0) {
         // Use camp date for countdown display
         const months = Math.floor(campDifference / (1000 * 60 * 60 * 24 * 30));
-        const days = Math.floor((campDifference % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((campDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((campDifference % (1000 * 60 * 60)) / (1000 * 60));
-        
+        const days = Math.floor(
+          (campDifference % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24)
+        );
+        const hours = Math.floor(
+          (campDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor(
+          (campDifference % (1000 * 60 * 60)) / (1000 * 60)
+        );
+
         setTimeLeft({ months, days, hours, minutes });
         setIsDeadlinePassed(false);
       } else {
@@ -58,17 +65,17 @@ export default function RegisterPage() {
   return (
     <main className="min-h-screen mt-10">
       {/* Hero Section with Background */}
-      <section 
+      <section
         className="relative min-h-[120vh] flex items-center justify-center bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(/images/apply_now_cover.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center top'
+          backgroundImage: "url(/images/apply_now_cover.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center top",
         }}
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
-        
+
         {/* Content */}
         <div className="relative z-10 text-center text-[#040149] mt-10 px-4 max-w-4xl mx-auto">
           {!isDeadlinePassed ? (
@@ -81,7 +88,7 @@ export default function RegisterPage() {
               >
                 Applications Open!
               </motion.h1>
-              
+
               <motion.h2
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -90,7 +97,7 @@ export default function RegisterPage() {
               >
                 Applications are open for this year camp
               </motion.h2>
-              
+
               <motion.h3
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -99,46 +106,15 @@ export default function RegisterPage() {
               >
                 Deadline for registration is 12 October 2025
               </motion.h3>
-              
+
               {/* Countdown Timer */}
-<motion.div
-  initial={{ opacity: 0, scale: 0.8 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 0.8, delay: 0.6 }}
-  className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl max-w-2xl mx-auto"
->
-  <div className="grid grid-cols-2 md:grid-cols-4 p-4 divide-x-2 divide-white/50">
-    <div className="text-center px-4">
-      <div className="text-3xl md:text-4xl font-bold text-yellow-300">
-        {timeLeft.months}
-      </div>
-      <div className="text-sm md:text-base text-white/80">Months</div>
-    </div>
+              <div className="w-full max-w-2xl px-4 mt-8">
+                <CountdownTimer
+                  targetDate={DEADLINE_DATE}
+                  className="mx-auto"
+                />
+              </div>
 
-    <div className="text-center px-4">
-      <div className="text-3xl md:text-4xl font-bold text-yellow-300">
-        {timeLeft.days}
-      </div>
-      <div className="text-sm md:text-base text-white/80">Days</div>
-    </div>
-
-    <div className="text-center px-4">
-      <div className="text-3xl md:text-4xl font-bold text-yellow-300">
-        {timeLeft.hours}
-      </div>
-      <div className="text-sm md:text-base text-white/80">Hours</div>
-    </div>
-
-    <div className="text-center px-4">
-      <div className="text-3xl md:text-4xl font-bold text-yellow-300">
-        {timeLeft.minutes}
-      </div>
-      <div className="text-sm md:text-base text-white/80">Minutes</div>
-    </div>
-  </div>
-</motion.div>
-
-              
               {/* Camp countdown label */}
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -146,7 +122,7 @@ export default function RegisterPage() {
                 transition={{ duration: 0.8, delay: 0.8 }}
                 className="text-xl md:text-2xl font-medium text-white mt-6"
               >
-                Until Buraq Space Camp 2025
+               Until Applications for the 19th Camp close
               </motion.p>
             </>
           ) : (
@@ -159,7 +135,7 @@ export default function RegisterPage() {
               >
                 Applications Closed!
               </motion.h1>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -167,7 +143,8 @@ export default function RegisterPage() {
                 className="text-center max-w-3xl mx-auto"
               >
                 <p className="text-2xl md:text-3xl font-semibold mb-4">
-                  Applications have ended for this year&apos;s camp. Thank you for your interest.
+                  Applications have ended for this year&apos;s camp. Thank you
+                  for your interest.
                 </p>
                 <p className="text-xl md:text-2xl font-medium text-yellow-300">
                   Registration for the next camp starts in August-September.
@@ -196,7 +173,7 @@ export default function RegisterPage() {
               className="mx-auto mb-8"
             />
           </motion.div>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -204,10 +181,13 @@ export default function RegisterPage() {
             viewport={{ once: true }}
             className="text-lg md:text-xl text-[#040149] leading-relaxed mb-8"
           >
-            Candidates aged 14 to 17, as of December 29th 2025, are encouraged to apply for this prestigious opportunity to become part of our esteemed society. To submit your application, you may complete the form below, but for the best experience, please{" "}
-            <a 
-              href="https://forms.gle/ybzyH91YZZPKabVh6" 
-              target="_blank" 
+            Candidates aged 14 to 17, as of December 29th 2025, are encouraged
+            to apply for this prestigious opportunity to become part of our
+            esteemed society. To submit your application, you may complete the
+            form below, but for the best experience, please{" "}
+            <a
+              href="https://forms.gle/ybzyH91YZZPKabVh6"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 hover:text-blue-800 underline font-semibold"
             >
@@ -215,8 +195,6 @@ export default function RegisterPage() {
             </a>
             .
           </motion.p>
-          
-
         </div>
       </section>
 
@@ -224,7 +202,6 @@ export default function RegisterPage() {
       {!isDeadlinePassed && (
         <section className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-4">
-    
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
