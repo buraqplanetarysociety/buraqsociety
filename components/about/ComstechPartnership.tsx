@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 interface ComstechPartnershipProps {
   variant?: "light" | "dark";
@@ -13,14 +14,38 @@ export default function ComstechPartnership({ variant = "light" }: ComstechPartn
     <section className={`py-16 px-4 ${bgColor} ${textColor}`}>
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-           <h2 className={`text-4xl md:text-5xl font-bold text-[#040149] mb-6`}>
-            Partnership with <span className="text-[#DBB13B]">COMSTECH</span>
-          </h2>
-          <div className="max-w-4xl mx-auto">
-            <p className={`text-lg leading-relaxed ${subtextColor}`}>
-              We are excited to announce our newly formed partnership with COMSTECH, which, created in 1981 under the Organization of Islamic Cooperation, is a Pakistan-based body dedicated to advancing science and technology, fostering collaboration, and building research capacity across Muslim-majority countries. Through this partnership, we anticipate enhanced opportunities for international engagement and collaboration in STEM disciplines across OIC member states, reinforcing our commitment to scientific excellence and transnational innovation. We are committed to deepening our collaborative relationship with COMSTECH in the years ahead.
-            </p>
+          {/* COMSTECH Logo */}
+          <div className="flex justify-center mb-8">
+            <Image
+              src="/images/comstech_logo.png"
+              alt="COMSTECH Logo"
+              width={120}
+              height={100}
+              className="object-contain"
+            />
           </div>
+          
+          <h2 className={`text-3xl md:text-4xl font-bold mb-6`}>
+            <span className="text-[#040149]">COMSTECH Patronage: </span> <span className="text-[#DBB13B]">A New Chapter for Buraq</span>
+          </h2>
+          
+
+          
+         <div className="max-w-4xl mx-auto">
+  <p className={`text-lg leading-relaxed text-justify ${subtextColor}`}>
+    We are excited to announce that the Buraq Planetary Society has come under the patronage of COMSTECH, an organisation which was created in 1981 under the Organization of Islamic Cooperation (OIC), an intergovernmental body representing 57 member states.
+  </p>
+  <p className={`text-lg leading-relaxed text-justify ${subtextColor} mt-4`}>
+    COMSTECH is a multilateral organisation and serves as the OIC&apos;s principal platform for science, technology, and innovation in the Islamic member states. This year, COMSTECH has recognized and encouraged Buraq Society&apos;s mission to inspire and empower young innovators. Moreover, the Buraq Planetary Society is honoured to announce that the 19th Buraq Space Camp will be hosted and championed by COMSTECH, reflecting their commitment to advancing STEM education and nurturing the next generation of scientists and engineers.
+  </p>
+  <p className={`text-lg leading-relaxed text-justify ${subtextColor} mt-4`}>
+    This high-level endorsement marks a pivotal moment in our mission. Under COMSTECH&apos;s patronage, Buraq will be encouraged and supported to extend its transformative, hands-on space education experience to youth from OIC nations. This move marks a powerful validation of Buraq&apos;s mission, opening the door for international expansion, deeper STEM collaboration, and the transformation of Buraq Space Camp into a model for youth scientific engagement across the Muslim world.
+  </p>
+  <p className={`text-lg leading-relaxed text-justify ${subtextColor} mt-4`}>
+    We are deeply grateful to COMSTECH for this incredible opportunity and are committed to upholding the trust they have placed in us. Together, we will work to ignite a passion for space and science in a new, international generation of innovators.
+  </p>
+</div>
+
         </div>
       </div>
     </section>

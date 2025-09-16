@@ -132,37 +132,54 @@ export default function HeroSection() {
                 
                 {slide.isCountdown ? (
                   // Countdown slide layout
-                  <div className="absolute inset-0 flex flex-col items-center justify-center">
-                    <div className="container mx-auto px-4 text-center text-white">
-                      <h1 className="text-xl sm:text-2xl md:text-3xl font-medium mb-4 sm:mb-6 px-4">
-                        {slide.title}
-                      </h1>
-                      
-                      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 text-white px-4">
-                        {slide.subtitle}
-                      </h2>
-                      
-                      <div className="text-[#91b1ff] text-xl sm:text-2xl md:text-3xl font-medium mb-8 sm:mb-12 px-4">
-  {slide.description.split('\n').map((line, index) => (
-    <p
-      key={index}
-      className={`${index === 0 ? 'mb-2' : ''} ${index === 1 ? 'text-white' : ''}`}
-    >
-      {line}
-    </p>
-  ))}
+             <div className="absolute inset-0 flex flex-col items-center justify-center">
+  <div className="container mx-auto px-4 text-center text-white">
+    {/* Logos Row */}
+    <div className="flex justify-center items-center gap-6 mb-4 sm:mb-6">
+      <Image
+        src="/images/logo_new_image-white.png"
+        alt="Buraq Society Logo"
+        width={70}
+        height={70}
+        className="object-contain"
+      />
+      <Image
+        src="/images/comstech_logo.png"
+        alt="COMSTECH Logo"
+        width={70}
+        height={70}
+        className="object-contain"
+      />
+    </div>
+
+    <h1 className="text-lg sm:text-xl md:text-2xl font-medium mb-2 sm:mb-4 px-4">
+      {slide.title}
+    </h1>
+
+    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-white px-4">
+      {slide.subtitle}
+    </h2>
+
+    <div className="text-[#91b1ff] text-base sm:text-lg md:text-xl font-medium mb-6 sm:mb-8 px-4">
+      {slide.description.split('\n').map((line, index) => (
+        <p
+          key={index}
+          className={`${index === 0 ? 'mb-1' : ''} ${
+            index === 1 ? 'text-white' : ''
+          }`}
+        >
+          {line}
+        </p>
+      ))}
+    </div>
+  </div>
+
+  {/* Countdown timer positioned at bottom */}
+  <div className="absolute bottom-6 sm:bottom-12 left-1/2 transform -translate-x-1/2 w-full max-w-2xl px-4">
+    <CountdownTimer targetDate={slide.countdownTarget!} className="mx-auto" />
+  </div>
 </div>
 
-                    </div>
-                    
-                    {/* Countdown timer positioned at bottom */}
-                    <div className="absolute bottom-8 sm:bottom-16 left-1/2 transform -translate-x-1/2 w-full max-w-2xl px-4">
-                      <CountdownTimer 
-                        targetDate={slide.countdownTarget!} 
-                        className="mx-auto"
-                      />
-                    </div>
-                  </div>
                 ) : (
                   // Regular slide layout
                   <div className="absolute inset-0 flex items-center justify-center">
