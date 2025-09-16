@@ -139,15 +139,15 @@ export default function HeroSection() {
       <Image
         src="/images/logo_new_image-white.png"
         alt="Buraq Society Logo"
-        width={70}
-        height={70}
+        width={90}
+        height={90}
         className="object-contain"
       />
       <Image
         src="/images/comstech_logo.png"
         alt="COMSTECH Logo"
-        width={70}
-        height={70}
+        width={90}
+        height={90}
         className="object-contain"
       />
     </div>
