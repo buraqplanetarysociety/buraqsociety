@@ -26,8 +26,16 @@ export default function ComstechPartnership({ variant = "light" }: ComstechPartn
           </div>
           
           <h2 className={`text-3xl md:text-4xl font-bold mb-6`}>
-            <span className="text-[#040149]">COMSTECH Patronage: </span> <span className="text-[#DBB13B]">A New Chapter for Buraq</span>
-          </h2>
+  <span className="text-[#040149]">
+    COMSTECH Patronage: {" "}
+  </span>
+  {/* Line break visible only on mobile */}
+  <br className="block md:hidden" />
+  <span className="text-[#DBB13B]">
+    A New Chapter for Buraq
+  </span>
+</h2>
+
           
 
           
