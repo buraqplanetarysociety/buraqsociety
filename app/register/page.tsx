@@ -16,7 +16,7 @@ interface TimeLeft {
 
 export default function RegisterPage() {
   // Deadline configuration - easily changeable
-  const DEADLINE_DATE = "2025-10-12T23:59:59";
+  const DEADLINE_DATE = "2025-12-12T23:59:59";
   const CAMP_DATE = "2025-10-12T23:59:59";
 
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
@@ -104,7 +104,7 @@ export default function RegisterPage() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="text-xl md:text-2xl font-medium mb-8 text-yellow-300"
               >
-                Deadline for registration is 12 October 2025
+                Deadline for registration is 12 December 2025
               </motion.h3>
 
               {/* Countdown Timer */}
