@@ -9,6 +9,7 @@ import FloatingRegisterButton from '@/components/FloatingRegisterButton'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://buraqspacecamp.pk'),
   title: 'Buraq Space Camp - Pakistan\'s Premier Space Education Program',
   description: 'Join Pakistan\'s most innovative space education program. A 10-day transformative journey in Islamabad, where future leaders are forged through innovation, collaboration, and cutting-edge space technology.',
   keywords: 'space camp, pakistan, space education, STEM, technology, aerospace, satellite, innovation',
