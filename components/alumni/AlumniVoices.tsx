@@ -19,7 +19,7 @@ const alumniVoices = [
     name: "Natasha Khan",
     batch: "2013",
     quote:
-      "When I joined Buraq Space Camp at age 16, I didn&apos;t realize I was stepping into one of the most transformative experiences of my life. It was a space where ambition, innovation, and leadership weren’t just encouraged; they were expected. Over ten intense days, I was challenged in ways I could have never anticipated, mentally, physically, and emotionally. Early mornings, freezing nights, and constant challenges taught me resilience, teamwork, and grit, lessons no textbook could offer. I learned that real growth happens far outside your comfort zone. One of the most impactful aspects was engaging with Pakistani trailblazers, mentors from around the world who generously shared their journeys. Their insights sparked something in me: a realization that leadership is rooted in perspective and purpose, not age, and that obstacles often hold the greatest potential for growth. Surrounded by brilliant minds from across the country, I experienced what it means to collaborate with purpose and envision a future without boundaries. We weren&apos;t just exploring science, we were discovering the potential of who we could become. Buraq gave me clarity about the kind of person I want to be. It lit a spark that still drives me: to lead with purpose, give back meaningfully, and help shape a better future for Pakistan.",
+      "When I joined Buraq Space Camp at age 16, I didn't realize I was stepping into one of the most transformative experiences of my life. It was a space where ambition, innovation, and leadership weren’t just encouraged; they were expected. Over ten intense days, I was challenged in ways I could have never anticipated, mentally, physically, and emotionally. Early mornings, freezing nights, and constant challenges taught me resilience, teamwork, and grit, lessons no textbook could offer. I learned that real growth happens far outside your comfort zone. One of the most impactful aspects was engaging with Pakistani trailblazers, mentors from around the world who generously shared their journeys. Their insights sparked something in me: a realization that leadership is rooted in perspective and purpose, not age, and that obstacles often hold the greatest potential for growth. Surrounded by brilliant minds from across the country, I experienced what it means to collaborate with purpose and envision a future without boundaries. We weren't just exploring science, we were discovering the potential of who we could become. Buraq gave me clarity about the kind of person I want to be. It lit a spark that still drives me: to lead with purpose, give back meaningfully, and help shape a better future for Pakistan.",
     role: "Alumni",
     rating: 5,
     avatar: "/images/AlumniVoices/natashakhan.jpg",
@@ -36,6 +36,28 @@ const alumniVoices = [
     avatar: "/images/AlumniVoices/wardahrafaqat.jpg",
     location: "Pakistan",
     achievement: "Purpose-Driven Leadership",
+  },
+  {
+    name: "Mustafa Khan",
+    batch: "2014",
+    quote:
+      "I'd spent most of my life feeling like a weird puzzle piece that never quite clicked.\n\nAt age 14, a fluke Google search at LGS Defence dropped me into Buraq, the first place that felt like home. It wasn't just telescopes and lab coats; it cracked open philosophy, psychology, and purpose, then dared us: \"Now live it.\"\n\nThose ten days rewired my DNA.\n\nI quizzed Dr. Pervez Hoodbhoy over dinner about the edges of physics, traded storytelling secrets with pop-icon / animator Haroon, and re-engineered my relationship with time thanks to life-coach legend Suleman Ahmer.\n\nI sang off-key around a bonfire, cranked out push-ups in the predawn chill, and found my tribe among the smartest, strangest, most unapologetically-themselves teens that Pakistan has ever produced.\n\nA decade later, that spark still powers everything I do. Buraq proved the most subversive equation of all: 1 curious mind + 1 radical community = infinite futures that rewrite themselves.\n\nThat was me, and it can be you.\n\nSo if you wonder whether ten days can truly change a life, take it from the skeptic who walked out 10 days later carrying a mission. Buraq isn't a camp; it's a launchpad, and it's still slingshotting its alumni toward horizons we haven't even mapped yet.",
+    role: "Founder of HumanOS and member of Stanford funds Philanthropy Council",
+    rating: 5,
+    avatar: "/images/AlumniVoices/mustafa-khan.jpg",
+    location: "America",
+    achievement: "Founder of HumanOS",
+  },
+  {
+    name: "Ali Farid Khwaja",
+    batch: "1996",
+    quote:
+      "Buraq was a life changing experience for me. It was like sudden immersion in a new world which was created at Adventure Inn in Islamabad at the Camp in 1996. I got to meet with, get inspired by and make friends with exceptional teenagers from around Pakistan. Many of them are still in touch. As a teenager you want to be heard, and taken seriously. Buraq created such an empowered place where most of us actually thought that we can dream to make a satellite and a PakBase Buraq Space Station by 2020. The ability to dream and the confidence that it is possible had quite a profound impact on me. I am very grateful to Dr. Shahid Mahmud and his family for sharing this opportunity with me. I hope others continue to benefit from it, like I did.",
+    role: "CEO of Oxford Frontier Capital and Co-founder Chairman of KTrade Securities",
+    rating: 5,
+    avatar: "/images/AlumniVoices/ali-farid-khawaja-2.png",
+    location: "Pakistan",
+    achievement: "CEO of Oxford Frontier Capital",
   },
 ];
 
