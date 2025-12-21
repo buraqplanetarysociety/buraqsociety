@@ -381,66 +381,6 @@ export default function NotableAlumni() {
                         </CardContent>
                       </Card>
                     </motion.div>
-
-                    {/* Mobile Modal */}
-                    <AnimatePresence>
-                      {selectedAlumniMobile === alumni.id && (
-                        <>
-                          {/* Backdrop */}
-                          <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            className="fixed inset-0 bg-black/50 z-40"
-                            onClick={() => setSelectedAlumniMobile(null)}
-                          />
-                          
-                          {/* Modal Content */}
-                          <motion.div
-                            initial={{ opacity: 0, scale: 0.9, y: 50 }}
-                            animate={{ opacity: 1, scale: 1, y: 0 }}
-                            exit={{ opacity: 0, scale: 0.9, y: 50 }}
-                            className="fixed inset-x-4 top-1/2 -translate-y-1/2 bg-white rounded-lg shadow-xl z-50 max-h-[80vh] overflow-y-auto"
-                          >
-                            <div className="p-6">
-                              <div className="flex items-center mb-4">
-                                <div className="relative w-16 h-16 mr-4 flex-shrink-0">
-                                  <Image
-                                    src={alumni.photo}
-                                    alt={alumni.name}
-                                    fill
-                                    className="rounded-full object-cover"
-                                  />
-                                </div>
-                                <div className="flex-1">
-                                  <h3 className="text-lg font-bold text-gray-900">
-                                    {alumni.name}
-                                  </h3>
-                                  <p className="text-sm text-[#DBB13B] font-medium">
-                                    {alumni.achievement}
-                                  </p>
-                                  <p className="text-xs text-gray-600">
-                                    {alumni.company}
-                                  </p>
-                                </div>
-                                <button
-                                  onClick={() => setSelectedAlumniMobile(null)}
-                                  className="ml-auto text-gray-500 hover:text-gray-700 text-2xl font-bold"
-                                >
-                                  ×
-                                </button>
-                              </div>
-                              <Badge className="bg-blue-100 text-blue-800 border-blue-300 mb-4">
-                                Batch {alumni.batch}
-                              </Badge>
-                              <p className="text-gray-700 text-sm leading-relaxed text-justify whitespace-pre-line">
-                                {alumni.bio}
-                              </p>
-                            </div>
-                          </motion.div>
-                        </>
-                      )}
-                    </AnimatePresence>
                   </CarouselItem>
                 );
               })}
@@ -452,6 +392,73 @@ export default function NotableAlumni() {
               <CarouselNext className="relative right-0 top-0 translate-y-0 bg-white/30 border-white/40 hover:bg-white/50 text-white shadow-lg backdrop-blur-sm h-10 w-10" />
             </div>
           </Carousel>
+
+          {/* Mobile Modal - Outside Carousel */}
+          <AnimatePresence>
+            {selectedAlumniMobile && (
+              <>
+                {/* Backdrop */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="fixed inset-0 bg-black/50 z-40"
+                  onClick={() => setSelectedAlumniMobile(null)}
+                />
+                
+                {/* Modal Content */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9, y: 50 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.9, y: 50 }}
+                  className="fixed left-4 right-4 top-[12vh] bottom-[5vh] bg-white rounded-lg shadow-xl z-50 overflow-y-auto"
+                >
+                  {(() => {
+                    const alumni = notableAlumni.find(a => a.id === selectedAlumniMobile);
+                    if (!alumni) return null;
+                    
+                    return (
+                      <div className="p-6">
+                        <div className="flex items-center mb-4">
+                          <div className="relative w-16 h-16 mr-4 flex-shrink-0">
+                            <Image
+                              src={alumni.photo}
+                              alt={alumni.name}
+                              fill
+                              className="rounded-full object-cover"
+                            />
+                          </div>
+                          <div className="flex-1">
+                            <h3 className="text-lg font-bold text-gray-900">
+                              {alumni.name}
+                            </h3>
+                            <p className="text-sm text-[#DBB13B] font-medium">
+                              {alumni.achievement}
+                            </p>
+                            <p className="text-xs text-gray-600">
+                              {alumni.company}
+                            </p>
+                          </div>
+                          <button
+                            onClick={() => setSelectedAlumniMobile(null)}
+                            className="ml-auto text-gray-500 hover:text-gray-700 text-2xl font-bold"
+                          >
+                            ×
+                          </button>
+                        </div>
+                        <Badge className="bg-blue-100 text-blue-800 border-blue-300 mb-4">
+                          Batch {alumni.batch}
+                        </Badge>
+                        <p className="text-gray-700 text-sm leading-relaxed text-justify whitespace-pre-line">
+                          {alumni.bio}
+                        </p>
+                      </div>
+                    );
+                  })()}
+                </motion.div>
+              </>
+            )}
+          </AnimatePresence>
         </div>
       </div>
     </section>
