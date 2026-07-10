@@ -7,8 +7,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 const stats = [
-  { icon: Users, value: "700+", label: "Alumni" },
-  { icon: Calendar, value: "18", label: "Camps" },
+  { icon: Users, value: "750+", label: "Alumni" },
+  { icon: Calendar, value: "19", label: "Camps" },
 ];
 
 export default function AboutSection() {

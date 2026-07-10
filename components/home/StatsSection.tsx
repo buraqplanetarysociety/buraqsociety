@@ -7,7 +7,7 @@ import { useRef, useEffect, useState } from 'react'
 const stats = [
   {
     icon: Users,
-    number: 700,
+    number: 750,
     suffix: '+',
     label: 'Alumni Network',
     description: 'Graduates making impact worldwide',
@@ -15,7 +15,7 @@ const stats = [
   },
   {
     icon: Award,
-    number: 18,
+    number: 19,
     suffix: '',
     label: 'Successful Camps',
     description: 'Years of excellence in education',
