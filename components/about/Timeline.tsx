@@ -44,6 +44,13 @@ const Timeline = ({ variant = "light" }: TimelineProps) => {
       description: "After the pandemic-induced break, the Buraq team used this time to reflect and refine the camp experience. Upon resumption in 2023, the structure was significantly enhanced: traditional lecture formats were reduced, making way for more STEM-focused activities, interactive discussions, and hands-on learning. The camp returned with renewed energy — more dynamic, immersive, and aligned with modern learning needs.",
       image: "/images/timeline-5.jpg",
       side: "left"
+    },
+    {
+      year: "2025",
+      title: "Buraq Bridging Borders",
+      description: "In 2025, Buraq took a major step onto the international stage with the patronage of OIC COMSTECH, a Ministerial Standing Committee of the OIC, which acts as the principal platform for science, technology, and innovation in the Islamic member states. Through OIC COMSTECH, Buraq is not only bringing together young minds from across the Muslim world, but also fostering collaboration, cultural exchange, and a shared passion for science, innovation, and leadership beyond national borders. This patronage thus provides Buraq with the opportunity to expand its long-standing impact on youth, while also helping OIC COMSTECH's mission of promoting STEM education and empowering the next generation of innovators and leaders.",
+      image: "/images/timeline-6.jpg",
+      side: "right"
     }
   ];
 
