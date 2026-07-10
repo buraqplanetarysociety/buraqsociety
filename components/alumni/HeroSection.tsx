@@ -122,7 +122,7 @@ export default function HeroSection() {
                 transition={{ delay: 1.2 }}
               >
                 <Users className="w-8 h-8 text-[#DBB13B] mx-auto mb-3" />
-                <div className="text-4xl font-bold text-white mb-2">700+</div>
+                <div className="text-4xl font-bold text-white mb-2">750+</div>
                 <div className="text-sm text-blue-200">Global Alumni</div>
               </motion.div>
               

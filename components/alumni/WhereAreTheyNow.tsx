@@ -63,7 +63,7 @@ const universities = [
     category: "Engineering",
   },
   {
-    name: "Agha Khan",
+    name: "Aga Khan",
     logo: "/images/Alumni and Legacy/aghakhan.png",
     location: "Pakistan",
     students: 3,

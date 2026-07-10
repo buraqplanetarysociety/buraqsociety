@@ -41,6 +41,10 @@ const dots = [
     start: { lat: 33.6844, lng: 73.0479, label: "Pakistan" }, // Islamabad
     end: { lat: 40.988587, lng: -100.946462, label: "USA" }, // Additional USA location
   },
+  {
+    start: { lat: 33.6844, lng: 73.0479, label: "Pakistan" }, // Islamabad
+    end: { lat: 35.6762, lng: 139.6503, label: "Japan" }, // Tokyo
+  },
 ];
 
 

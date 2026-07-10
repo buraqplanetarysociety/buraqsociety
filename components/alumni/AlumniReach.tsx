@@ -157,7 +157,7 @@ export default function AlumniReach() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
               <Users className="w-8 h-8 text-yellow-400 mx-auto mb-4" />
-              <div className="text-3xl font-bold text-white mb-2">700+</div>
+              <div className="text-3xl font-bold text-white mb-2">750+</div>
               <div className="text-gray-300">Total Alumni</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">

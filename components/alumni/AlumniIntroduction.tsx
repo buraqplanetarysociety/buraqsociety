@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Users, Globe, Award, TrendingUp } from "lucide-react";
 
 const stats = [
-  { icon: Users, value: "700+", label: "Alumni Worldwide", color: "from-blue-500 to-cyan-500" },
+  { icon: Users, value: "750+", label: "Alumni Worldwide", color: "from-blue-500 to-cyan-500" },
   { icon: Globe, value: "50+", label: "Nations connected through Alumni", color: "from-purple-500 to-pink-500" },
   { icon: Award, value: "100+", label: "Cadet Alumni in Top Universities", color: "from-green-500 to-emerald-500" },
   // { icon: TrendingUp, value: "95%", label: "Success Rate", color: "from-orange-500 to-red-500" },
@@ -107,7 +107,7 @@ export default function AlumniIntroduction() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Global Impact</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  The Buraq alumni network represents a diverse community of over <span className="font-bold text-[#040149] ">700 graduates</span> who have transformed their camp experience into remarkable achievements across the globe. From groundbreaking research to innovative startups, our alumni are making their mark in every field imaginable.
+                  The Buraq alumni network represents a diverse community of over <span className="font-bold text-[#040149] ">750 graduates</span> who have transformed their camp experience into remarkable achievements across the globe. From groundbreaking research to innovative startups, our alumni are making their mark in every field imaginable.
                 </p>
               </div>
             </motion.div>
