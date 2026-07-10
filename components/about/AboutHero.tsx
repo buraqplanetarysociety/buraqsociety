@@ -99,13 +99,13 @@ export default function AboutHero() {
               >
                 <div className="grid grid-cols-3 gap-4 text-center">
                   <div>
-                    <p className="text-3xl font-bold text-[#DBB13B]">18</p>
+                    <p className="text-3xl font-bold text-[#DBB13B]">19</p>
                     <p className="text-xs text-white/70 mt-1">
                       Successful Camps
                     </p>
                   </div>
                   <div>
-                    <p className="text-3xl font-bold text-[#DBB13B]">700+</p>
+                    <p className="text-3xl font-bold text-[#DBB13B]">750+</p>
                     <p className="text-xs text-white/70 mt-1">Alumni</p>
                   </div>
                   <div>

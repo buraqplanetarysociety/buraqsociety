@@ -155,7 +155,7 @@ export default function WhatIsBuraq({ variant = "light" }: WhatIsBuraqProps) {
             bound not just by memory, but by purpose. It&apos;s a society where help
             arrives before it&apos;s asked for, where guidance flows across batches,
             borders, and generations. In a world often fragmented, Buraq&apos;s
-            network is an orbit of more than 700 alumni - magnetic and
+            network is an orbit of more than 750 alumni - magnetic and
             dependable in how far it reaches and how deeply it supports.
           </p>
         </motion.div>
