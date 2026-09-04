@@ -29,7 +29,7 @@ const getCoverPhotoFilename = (year: string) => {
     '2019': '16th Buraq Space Camp-2019.png',
     '2023': '17th Buraq Space Camp-2023.png',
     '2024': '18th Buraq Space Camp-2025.png', // Note: 2024 maps to 2025 filename
-    '2025': '19th Buraq Space Camp-2025.jpg',
+    '2025': '19th Buraq Space Camp-2025.jpeg',
   };
   return yearMappings[year] || `${year}-cover.png`; // fallback
 };
