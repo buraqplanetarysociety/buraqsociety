@@ -50,8 +50,12 @@ export default function FAQPage() {
                 {
                   question: "What is the cost of attending Buraq and who pays for it?",
                   answer: "Once selected, cadets attend the camp entirely free of charge. Buraq covers all accommodation, meals, learning resources, and access to lectures and activities. However, Buraq is not responsible for covering the cost of the cadets transport to and from the camp location."
+                },
+                {
+                  question: "How will Early Decision and Regular Decision applications work?",
+                  answer: "Applications will be accepted in two application rounds this year. Early Decision closes on 20th September midnight, and applicants who are ready to submit are encouraged to make use of this window rather than wait for the later phase.\n\nRegular will provide a further opportunity to apply, closing at midnight of 4th October. Applications received in both application rounds will undergo the same selection process and receive equal consideration, meaning that applicants under Regular Decision will be at no disadvantage."
                 }
-              ]} 
+              ]}
             />
 
             <FAQSection 

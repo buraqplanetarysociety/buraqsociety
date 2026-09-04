@@ -6,7 +6,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft } from "lucide-react";
-import { campYears, CampYear } from "@/data/campData";
+import { campYears } from "@/data/campData";
 import AboutCampSection from "@/components/gallery/AboutCampSection";
 import PhotoGrid from "@/components/gallery/PhotoGrid";
 import VideoSection from "@/components/gallery/VideoSection";
@@ -17,35 +17,23 @@ export default function YearGalleryPage() {
   const params = useParams();
   const router = useRouter();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const [year, setYear] = useState<CampYear | null>(null);
+
+  // Derived, not stored: the year is a pure lookup on the route param, so
+  // holding it in state only cost a render pass and a spinner on first paint.
+  const yearId = params.id as string;
+  const year = campYears.find((y) => y.id === yearId);
 
   useEffect(() => {
-    const yearId = params.id as string;
-    const foundYear = campYears.find((y) => y.id === yearId);
-    
-    if (!foundYear) {
-      notFound();
-      return;
-    }
-    
-    setYear(foundYear);
-    // Scroll to top when page loads
+    // Scroll to top when the route changes
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [params.id]);
+  }, [yearId]);
 
   const handleBackToGallery = () => {
     router.push("/gallery");
   };
 
   if (!year) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-[#040149] mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading gallery...</p>
-        </div>
-      </div>
-    );
+    notFound();
   }
 
   return (

@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --quiet",
+    "lint": "eslint .",
     "optimize:images": "node scripts/optimize-gallery-images.mjs"
   },
   "dependencies": {

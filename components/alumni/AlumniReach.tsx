@@ -2,8 +2,9 @@
 
 import { motion } from "framer-motion";
 import { MapPin, Users} from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { AlumniWorldMap } from "./AlumniWorldMap";
+import { useIsClient } from "@/lib/use-is-client";
 
 // const alumniReachData = [
 //   { country: "Pakistan", count: 450, flag: "🇵🇰", color: "from-green-500 to-emerald-600", percentage: 100 },
@@ -18,11 +19,7 @@ import { AlumniWorldMap } from "./AlumniWorldMap";
 
 export default function AlumniReach() {
   const [hoveredCountry, setHoveredCountry] = useState<string | null>(null);
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
+  const isClient = useIsClient();
 
   if (!isClient) {
     return (

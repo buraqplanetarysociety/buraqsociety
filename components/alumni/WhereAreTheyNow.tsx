@@ -2,8 +2,9 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { GraduationCap, Building, Users, Star } from "lucide-react";
+import { useIsClient } from "@/lib/use-is-client";
 
 const universities = [
   {
@@ -107,13 +108,10 @@ const universities = [
 export default function WhereAreTheyNow() {
   // ✅ All useState hooks at the top
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [isClient, setIsClient] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
 
   // Prevent hydration mismatch
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
+  const isClient = useIsClient();
 
   const categories = [
     "All",

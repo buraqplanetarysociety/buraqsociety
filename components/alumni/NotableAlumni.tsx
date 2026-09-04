@@ -7,7 +7,14 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import Image from "next/image";
 import { useState } from "react";
 import { Award, Briefcase, GraduationCap, Globe, ExternalLink, Star } from "lucide-react";
- 
+import { createParticles } from "@/lib/decorative-particles";
+
+const starField = createParticles(30, {
+  baseDuration: 3,
+  durationSpread: 2,
+  maxDelay: 2,
+});
+
 const notableAlumni = [
   {
     id: "taqi-jafri",
@@ -81,22 +88,22 @@ export default function NotableAlumni() {
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(59,130,246,0.15),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(147,51,234,0.15),transparent_50%)]" />
-        {[...Array(30)].map((_, i) => (
+        {starField.map((star, i) => (
           <motion.div
             key={i}
             className="absolute w-1 h-1 bg-white rounded-full"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: star.left,
+              top: star.top,
             }}
             animate={{
               opacity: [0.3, 1, 0.3],
               scale: [1, 1.5, 1],
             }}
             transition={{
-              duration: 3 + Math.random() * 2,
+              duration: star.duration,
               repeat: Infinity,
-              delay: Math.random() * 2,
+              delay: star.delay,
             }}
           />
         ))}

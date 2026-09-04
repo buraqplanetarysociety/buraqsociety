@@ -3,6 +3,7 @@
 import { motion, useInView } from 'framer-motion'
 import { Users, Award, Globe, Rocket } from 'lucide-react'
 import { useRef, useEffect, useState } from 'react'
+import { useIsClient } from '@/lib/use-is-client'
 
 const stats = [
   {
@@ -33,11 +34,7 @@ const stats = [
 
 function AnimatedCounter({ target, suffix, inView }: { target: number; suffix: string; inView: boolean }) {
   const [count, setCount] = useState(0)
-  const [isClient, setIsClient] = useState(false)
-
-  useEffect(() => {
-    setIsClient(true)
-  }, [])
+  const isClient = useIsClient()
 
   useEffect(() => {
     if (!inView || !isClient) return

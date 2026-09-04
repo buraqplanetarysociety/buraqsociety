@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function FloatingRegisterButton() {
   return (
     <motion.div
-      className="fixed bottom-6 left-6 z-50"
+      className="fixed bottom-6 right-6 z-50"
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, delay: 1 }}

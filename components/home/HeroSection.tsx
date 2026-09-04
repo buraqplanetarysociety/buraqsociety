@@ -66,6 +66,10 @@ export default function HeroSection() {
       return
     }
 
+    // Seeding slide state from Embla's imperative API is the one thing an
+    // effect is for here: the count only exists once the carousel has mounted
+    // and measured itself, so there is nothing to derive during render.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setCount(api.scrollSnapList().length)
     setCurrent(api.selectedScrollSnap() + 1)
 

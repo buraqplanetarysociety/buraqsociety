@@ -2,6 +2,13 @@
 
 import { motion } from "framer-motion";
 import { Sparkles, ArrowDown, Users, Globe, Award } from "lucide-react";
+import { createParticles } from "@/lib/decorative-particles";
+
+const floatingDots = createParticles(30, {
+  baseDuration: 4,
+  durationSpread: 2,
+  maxDelay: 2,
+});
 
 export default function HeroSection() {
   return (
@@ -13,13 +20,13 @@ export default function HeroSection() {
         
         {/* Floating Dots */}
         <div className="absolute top-0 left-0 w-full h-full">
-          {[...Array(30)].map((_, i) => (
+          {floatingDots.map((dot, i) => (
             <motion.div
               key={i}
               className="absolute w-2 h-2 bg-blue-400 rounded-full opacity-40"
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
+                left: dot.left,
+                top: dot.top,
               }}
               animate={{
                 y: [0, -20, 0],
@@ -27,9 +34,9 @@ export default function HeroSection() {
                 scale: [1, 1.2, 1],
               }}
               transition={{
-                duration: 4 + Math.random() * 2,
+                duration: dot.duration,
                 repeat: Infinity,
-                delay: Math.random() * 2,
+                delay: dot.delay,
               }}
             />
           ))}

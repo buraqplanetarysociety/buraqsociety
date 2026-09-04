@@ -13,6 +13,13 @@ import {
   MessageCircle,
 } from "lucide-react";
 import Image from "next/image";
+import { createParticles } from "@/lib/decorative-particles";
+
+const floatingQuotes = createParticles(8, {
+  baseDuration: 8,
+  durationSpread: 4,
+  maxDelay: 3,
+});
 
 const alumniVoices = [
   {
@@ -85,13 +92,13 @@ export default function AlumniVoices() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(147,197,253,0.08),transparent_50%)]" />
 
         {/* Floating Quote Marks */}
-        {[...Array(8)].map((_, i) => (
+        {floatingQuotes.map((quote, i) => (
           <motion.div
             key={i}
             className="absolute text-blue-400/10 text-6xl font-serif"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: quote.left,
+              top: quote.top,
             }}
             animate={{
               y: [0, -30, 0],
@@ -99,9 +106,9 @@ export default function AlumniVoices() {
               opacity: [0.1, 0.2, 0.1],
             }}
             transition={{
-              duration: 8 + Math.random() * 4,
+              duration: quote.duration,
               repeat: Infinity,
-              delay: Math.random() * 3,
+              delay: quote.delay,
             }}
           >
             &quot;
