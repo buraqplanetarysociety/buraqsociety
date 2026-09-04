@@ -20,6 +20,38 @@ export interface CampYear {
 
 export const campYears: CampYear[] = [
     {
+        "id": "buraq-2025",
+        "year": "2025",
+        "title": "2025",
+        "coverImage": "/images/gallery/2025/buraq-2025-11.webp",
+        "highlight": "Camp 2025 Adventures",
+        "aboutCamp": {
+            "heading": "BEYOND BORDERS",
+            "paragraph": "The 19th Buraq Space Camp opened on 29th December 2025 at the COMSTECH Secretariat in Islamabad, and for the first time the flags standing behind the podium were not Pakistan's alone. Held under the patronage of OIC COMSTECH, the camp welcomed delegates from across the Islamic world into a hall built for scientific diplomacy — and then handed it to a cohort of teenagers. Over eight days they filled it: rockets assembled on the lawn and launched into a winter sky, telescopes trained on the dark above the capital, laboratories where a pendulum or a Van de Graaff generator became an argument to be settled rather than a fact to be memorised. What began in 1994 as a small camp in Murree closed 2025 as an invitation extended to 57 nations."
+        },
+        "values": ["Ambition", "Discovery", "Collaboration", "Legacy"],
+        "photos": [
+            { "id": "1", "src": "/images/gallery/2025/buraq-2025-11.webp", "alt": "19th Buraq Space Camp official group photograph with cadets and dignitaries", "size": "banner" },
+            { "id": "2", "src": "/images/gallery/2025/buraq-2025-18.webp", "alt": "Opening ceremony at the COMSTECH Secretariat beneath the flags of OIC member states", "size": "large" },
+            { "id": "3", "src": "/images/gallery/2025/buraq-2025-02.webp", "alt": "Cadets gathered in front of the OIC COMSTECH camp banner", "size": "medium" },
+            { "id": "4", "src": "/images/gallery/2025/buraq-2025-13.webp", "alt": "Cadets preparing a water rocket for launch on the lawn", "size": "large" },
+            { "id": "5", "src": "/images/gallery/2025/buraq-2025-10.webp", "alt": "Night sky observation session around the telescope", "size": "medium" },
+            { "id": "6", "src": "/images/gallery/2025/buraq-2025-15.webp", "alt": "A cadet observing through the telescope after dark", "size": "small" },
+            { "id": "7", "src": "/images/gallery/2025/buraq-2025-17.webp", "alt": "Instructor demonstrating a Van de Graaff generator to cadets", "size": "medium" },
+            { "id": "8", "src": "/images/gallery/2025/buraq-2025-14.webp", "alt": "Cadets assembling a physics model during a laboratory session", "size": "large" },
+            { "id": "9", "src": "/images/gallery/2025/buraq-2025-04.webp", "alt": "Cadets taking notes during a lecture in the auditorium", "size": "small" },
+            { "id": "10", "src": "/images/gallery/2025/buraq-2025-12.webp", "alt": "Classroom session in progress at the 19th Buraq Space Camp", "size": "medium" },
+            { "id": "11", "src": "/images/gallery/2025/buraq-2025-16.webp", "alt": "Cadets following a presentation during a teaching session", "size": "large" },
+            { "id": "12", "src": "/images/gallery/2025/buraq-2025-09.webp", "alt": "Cadets and international delegates seated at the opening ceremony", "size": "medium" },
+            { "id": "13", "src": "/images/gallery/2025/buraq-2025-08.webp", "alt": "COMSTECH officials greeting the cadet line-up", "size": "small" },
+            { "id": "14", "src": "/images/gallery/2025/buraq-2025-07.webp", "alt": "Cadets assembled outdoors as an official addresses them", "size": "medium" },
+            { "id": "15", "src": "/images/gallery/2025/buraq-2025-03.webp", "alt": "Camp organising team in front of the 19th Buraq Space Camp banner", "size": "large" },
+            { "id": "16", "src": "/images/gallery/2025/buraq-2025-01.webp", "alt": "Cadets with their awards outside the STIO Secretariat", "size": "medium" },
+            { "id": "17", "src": "/images/gallery/2025/buraq-2025-05.webp", "alt": "Cadets between sessions at the camp accommodation", "size": "small" },
+            { "id": "18", "src": "/images/gallery/2025/buraq-2025-06.webp", "alt": "Cadets sharing a moment together during the camp", "size": "medium" }
+        ]
+    },
+    {
         "id": "buraq-2024",
         "year": "2024",
         "title": "2024",

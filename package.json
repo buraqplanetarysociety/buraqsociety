@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --quiet"
+    "lint": "next lint --quiet",
+    "optimize:images": "node scripts/optimize-gallery-images.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
@@ -72,6 +73,7 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
-    "baseline-browser-mapping": "^2.10.42"
+    "baseline-browser-mapping": "^2.10.42",
+    "sharp": "^0.34.5"
   }
 }
