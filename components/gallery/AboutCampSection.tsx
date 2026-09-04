@@ -29,7 +29,7 @@ const getCoverPhotoFilename = (year: string) => {
     '2019': '16th Buraq Space Camp-2019.png',
     '2023': '17th Buraq Space Camp-2023.png',
     '2024': '18th Buraq Space Camp-2025.png', // Note: 2024 maps to 2025 filename
-    '2025': '19th Buraq Space Camp-2025.webp',
+    '2025': '19th Buraq Space Camp-2025.jpg',
   };
   return yearMappings[year] || `${year}-cover.png`; // fallback
 };
@@ -74,7 +74,7 @@ export default function AboutCampSection({ year }: AboutCampSectionProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-lg text-gray-700 leading-relaxed"
+          className="text-lg text-gray-700 leading-relaxed whitespace-pre-line"
         >
           {year.aboutCamp.paragraph}
         </motion.p>

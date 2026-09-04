@@ -25,11 +25,12 @@ export const campYears: CampYear[] = [
         "title": "2025",
         "coverImage": "/images/gallery/2025/buraq-2025-11.webp",
         "highlight": "Camp 2025 Adventures",
+        "videoLink": "https://www.youtube.com/embed/nmkjbiPDGJQ",
         "aboutCamp": {
-            "heading": "BEYOND BORDERS",
-            "paragraph": "The 19th Buraq Space Camp opened on 29th December 2025 at the COMSTECH Secretariat in Islamabad, and for the first time the flags standing behind the podium were not Pakistan's alone. Held under the patronage of OIC COMSTECH, the camp welcomed delegates from across the Islamic world into a hall built for scientific diplomacy — and then handed it to a cohort of teenagers. Over eight days they filled it: rockets assembled on the lawn and launched into a winter sky, telescopes trained on the dark above the capital, laboratories where a pendulum or a Van de Graaff generator became an argument to be settled rather than a fact to be memorised. What began in 1994 as a small camp in Murree closed 2025 as an invitation extended to 57 nations."
+            "heading": "Buraq Bridging Borders",
+            "paragraph": "For three decades, Buraq had gathered bright minds beneath a common sky. This year, that sky stretched further than ever before. Under the patronage of OIC COMSTECH, a Ministerial Standing Committee of the OIC, Buraq became more than a camp—it became a crossroads of nations, cultures, and aspirations.\n\nWith cadets coming from across the Muslim world, each carried a different story, yet embodied the common hunger to learn, explore, and create. Here, borders became lines on maps rather than barriers between people. Strangers became teammates, conversations became collaborations, and shared challenges became shared triumphs.\n\nMore than an international gathering, this was the beginning of a broader movement. The patronage of OIC COMSTECH affirmed a shared commitment to empowering the next generation of scientists and leaders, while providing Buraq with a valuable platform to extend its impact across the Muslim world. It offered a glimpse of the future Buraq strives to build: a generation connected by purpose, collaboration, and a shared vision for progress."
         },
-        "values": ["Ambition", "Discovery", "Collaboration", "Legacy"],
+        "values": ["Unity", "Belonging"],
         "photos": [
             { "id": "1", "src": "/images/gallery/2025/buraq-2025-11.webp", "alt": "19th Buraq Space Camp official group photograph with cadets and dignitaries", "size": "banner" },
             { "id": "2", "src": "/images/gallery/2025/buraq-2025-18.webp", "alt": "Opening ceremony at the COMSTECH Secretariat beneath the flags of OIC member states", "size": "large" },
