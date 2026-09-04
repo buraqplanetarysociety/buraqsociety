@@ -10,7 +10,13 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://buraqspacecamp.pk'),
-  title: 'Buraq Space Camp - Pakistan\'s Premier Space Education Program',
+  title: {
+    default: 'Buraq Space Camp - Pakistan\'s Premier Space Education Program',
+    // Per-page titles render as e.g. "Apply Now | Buraq Space Camp". Without
+    // these, every route served the same title and search engines had to guess
+    // a label for each one.
+    template: '%s | Buraq Space Camp',
+  },
   description: 'Join Pakistan\'s most innovative space education program. A 10-day transformative journey in Islamabad, where future leaders are forged through innovation, collaboration, and cutting-edge space technology.',
   keywords: 'space camp, pakistan, space education, STEM, technology, aerospace, satellite, innovation',
   authors: [{ name: 'Buraq Space Camp' }],

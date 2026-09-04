@@ -1,5 +1,12 @@
 import React from "react";
+import type { Metadata } from "next";
 import FAQSection from "@/components/faq/FAQSection";
+
+export const metadata: Metadata = {
+  title: "Frequently Asked Questions",
+  description:
+    "Answers to common questions about Buraq Space Camp: selection, age limits, cost, what to pack, and life at the camp.",
+};
 
 export default function FAQPage() {
   return (

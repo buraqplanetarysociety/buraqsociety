@@ -42,7 +42,7 @@ export default function Header() {
               <div className="relative">
                 <Image 
                   src={logo} 
-                  alt="BURAQ Logo" 
+                  alt="Buraq Space Camp — Home"
                   width={0} 
                   height={0} 
                   className='w-auto h-12 transition-all duration-300' 
