@@ -105,7 +105,11 @@ export default function RegisterPage() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="text-xl md:text-2xl font-medium mb-8 text-yellow-300"
               >
-                Deadline for registration is 4 October 2026
+                Applications will close in two stages:
+                <br />
+                Early Decision: 20th September 2026
+                <br />
+                Regular Decision: 4th October 2026
               </motion.h3>
 
               {/* Countdown Timer */}
