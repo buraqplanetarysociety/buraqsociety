@@ -14,6 +14,22 @@ interface MapProps {
   lineColor?: string;
 }
 
+// Coordinate space of the overlay <svg> the arcs and pins are drawn in.
+const VIEW_WIDTH = 800;
+const VIEW_HEIGHT = 400;
+
+// Seconds over which arc draw-in animations are staggered.
+const ARC_STAGGER_WINDOW = 3.5;
+
+// dotted-map draws its dots in Web Mercator, cropped to this window (its
+// DEFAULT_WORLD_REGION). Pins must use the same projection to land on the
+// right country; a flat lat/lng mapping puts them several degrees too far
+// north, increasingly so away from the equator.
+const MAP_REGION = { lat: { min: -56, max: 71 }, lng: { min: -179, max: 179 } };
+
+const mercatorY = (lat: number) =>
+  Math.log(Math.tan(Math.PI / 4 + (lat * Math.PI) / 360));
+
 export function WorldMap({
   dots = [],
   lineColor = "#0ea5e9",
@@ -30,10 +46,23 @@ export function WorldMap({
     backgroundColor: "#1B3572",
   });
 
+  // The map image is not 2:1 (it is 210x100), so inside the 2:1 container it
+  // is letterboxed. Mirror that fit so pins sit on the dots actually drawn.
+  const [, mapWidth, mapHeight] = (
+    svgMap.match(/viewBox="0 0 ([\d.]+) ([\d.]+)"/) ?? ["", "210", "100"]
+  ).map(Number);
+  const fitScale = Math.min(VIEW_WIDTH / mapWidth, VIEW_HEIGHT / mapHeight);
+  const offsetX = (VIEW_WIDTH - mapWidth * fitScale) / 2;
+  const offsetY = (VIEW_HEIGHT - mapHeight * fitScale) / 2;
+  const mercatorTop = mercatorY(MAP_REGION.lat.max);
+  const mercatorSpan = mercatorTop - mercatorY(MAP_REGION.lat.min);
+
   const projectPoint = (lat: number, lng: number) => {
-    const x = (lng + 180) * (800 / 360);
-    const y = (90 - lat) * (400 / 180);
-    return { x, y };
+    const mapX =
+      (mapWidth * (lng - MAP_REGION.lng.min)) /
+      (MAP_REGION.lng.max - MAP_REGION.lng.min);
+    const mapY = (mapHeight * (mercatorTop - mercatorY(lat))) / mercatorSpan;
+    return { x: offsetX + mapX * fitScale, y: offsetY + mapY * fitScale };
   };
 
   const createCurvedPath = (
@@ -57,7 +86,7 @@ export function WorldMap({
       />
       <svg
         ref={svgRef}
-        viewBox="0 0 800 400"
+        viewBox={`0 0 ${VIEW_WIDTH} ${VIEW_HEIGHT}`}
         className="w-full h-full absolute inset-0 pointer-events-none select-none"
       >
         {dots.map((dot, i) => {
@@ -78,7 +107,9 @@ export function WorldMap({
                 }}
                 transition={{
                   duration: 1,
-                  delay: 0.5 * i,
+                  // Spread the draw-in over a fixed window so adding
+                  // destinations doesn't make the last arc start ages later.
+                  delay: (ARC_STAGGER_WINDOW * i) / dots.length,
                   ease: "easeOut",
                 }}
                 key={`start-upper-${i}`}
