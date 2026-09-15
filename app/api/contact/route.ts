@@ -1,14 +1,40 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+// Everything below is typed by website visitors and lands in an HTML email,
+// so it must be escaped or a visitor could inject links and markup into the
+// inbox.
+const escapeHtml = (value: string) =>
+  value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+
 export async function POST(request: NextRequest) {
   try {
-    const { name, contact, message } = await request.json();
+    const body = await request.json();
+    const [name, email, contact, message] = [
+      body.name,
+      body.email,
+      body.contact,
+      body.message,
+    ].map((field) => (typeof field === 'string' ? field.trim() : ''));
 
     // ✅ Validate required fields
-    if (!name || !contact || !message) {
+    if (!name || !email || !contact || !message) {
       return NextResponse.json(
         { error: 'All fields are required' },
+        { status: 400 }
+      );
+    }
+
+    if (!EMAIL_PATTERN.test(email)) {
+      return NextResponse.json(
+        { error: 'Please enter a valid email address' },
         { status: 400 }
       );
     }
@@ -26,6 +52,9 @@ export async function POST(request: NextRequest) {
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: 'anushay@buraqsociety.org',
+      // Mail is sent from the site's own account; this makes "Reply" in the
+      // inbox go to the person who asked rather than back to that account.
+      replyTo: { name, address: email },
       subject: 'Question from Buraq Society Website',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -35,13 +64,14 @@ export async function POST(request: NextRequest) {
           
           <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
             <h3 style="color: #040149; margin-top: 0;">Contact Information</h3>
-            <p><strong>Name:</strong> ${name}</p>
-            <p><strong>Contact:</strong> ${contact}</p>
+            <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+            <p><strong>Email:</strong> <a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></p>
+            <p><strong>Contact Number:</strong> ${escapeHtml(contact)}</p>
           </div>
-          
+
           <div style="background-color: #fff; padding: 20px; border: 1px solid #e9ecef; border-radius: 8px;">
             <h3 style="color: #040149; margin-top: 0;">Message</h3>
-            <p style="line-height: 1.6; color: #333;">${message}</p>
+            <p style="line-height: 1.6; color: #333;">${escapeHtml(message).replace(/\n/g, '<br>')}</p>
           </div>
           
           <div style="margin-top: 20px; padding: 15px; background-color: #040149; color: white; border-radius: 8px; text-align: center;">

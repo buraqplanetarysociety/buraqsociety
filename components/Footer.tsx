@@ -31,6 +31,7 @@ export default function Footer() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
+    email: "",
     contact: "",
     message: "",
   });
@@ -65,7 +66,7 @@ export default function Footer() {
 
       if (response.ok) {
          // Success - reset form and close dialog
-         setFormData({ name: "", contact: "", message: "" });
+         setFormData({ name: "", email: "", contact: "", message: "" });
          setIsDialogOpen(false);
          
          toast({
@@ -382,17 +383,34 @@ export default function Footer() {
                   />
                 </div>
                 <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                    Email *
+                  </label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    required
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    placeholder="you@example.com"
+                    className="w-full"
+                  />
+                </div>
+                <div>
                   <label htmlFor="contact" className="block text-sm font-medium text-gray-700 mb-1">
-                    Contact Number/Email *
+                    Contact Number *
                   </label>
                   <Input
                     id="contact"
                     name="contact"
-                    type="text"
+                    type="tel"
+                    autoComplete="tel"
                     required
                     value={formData.contact}
                     onChange={handleInputChange}
-                    placeholder="Your phone number or email"
+                    placeholder="Your phone number"
                     className="w-full"
                   />
                 </div>
