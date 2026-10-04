@@ -16,8 +16,8 @@ interface TimeLeft {
 
 export default function RegisterPage() {
   // Deadline configuration - easily changeable
-  // Regular Decision closes at midnight on 4 October; camp opens 25 December
-  const DEADLINE_DATE = "2026-10-04T23:59:59";
+  // Regular Decision extended to midnight on 11 October; camp opens 25 December
+  const DEADLINE_DATE = "2026-10-11T23:59:59";
   const CAMP_DATE = "2026-12-25T23:59:59";
 
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
@@ -87,7 +87,7 @@ export default function RegisterPage() {
                 transition={{ duration: 0.8 }}
                 className="text-5xl md:text-7xl font-bold mb-6 text-shadow-lg"
               >
-                Applications Open!
+                Regular Decision Deadline Extended!
               </motion.h1>
 
               <motion.h2
@@ -96,7 +96,8 @@ export default function RegisterPage() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-2xl md:text-3xl font-semibold mb-4"
               >
-                Applications are open for this year camp
+                The Regular Decision application period for the 20th Buraq
+                Space Camp has been extended.
               </motion.h2>
 
               <motion.h3
@@ -105,11 +106,9 @@ export default function RegisterPage() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="text-xl md:text-2xl font-medium mb-8 text-yellow-300"
               >
-                Applications will close in two stages:
+                Applications now close on 11 October 2026
                 <br />
-                Early Decision: 20th September 2026
-                <br />
-                Regular Decision: 4th October 2026
+                This is the final deadline
               </motion.h3>
 
               {/* Countdown Timer */}
