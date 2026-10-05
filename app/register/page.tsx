@@ -107,12 +107,10 @@ export default function RegisterPage() {
                 className="text-xl md:text-2xl font-medium mb-8 text-yellow-300"
               >
                 Applications now close on 11 October 2026
-                <br />
-                This is the final deadline
               </motion.h3>
 
               {/* Countdown Timer */}
-              <div className="w-full max-w-2xl px-4 mt-8">
+              <div className="w-full max-w-2xl mx-auto px-4 mt-8">
                 <CountdownTimer
                   targetDate={DEADLINE_DATE}
                   className="mx-auto"
