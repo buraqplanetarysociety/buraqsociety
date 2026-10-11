@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Apply Now',
   description:
-    'Apply to Buraq Space Camp. Open to candidates aged 14 to 17, with Early Decision and Regular Decision application rounds.',
+    'Applications for the 20th Buraq Space Camp have now closed. Applications are under review, and shortlisted candidates will be contacted by email.',
 }
 
 export default function RegisterLayout({

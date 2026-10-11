@@ -1,68 +1,8 @@
 "use client";
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { ExternalLink, Calendar, Clock } from "lucide-react";
 import Image from "next/image";
-import CountdownTimer from "@/components/ui/countdown-timer";
-
-interface TimeLeft {
-  months: number;
-  days: number;
-  hours: number;
-  minutes: number;
-}
 
 export default function RegisterPage() {
-  // Deadline configuration - easily changeable
-  // Regular Decision extended to midnight on 11 October; camp opens 25 December
-  const DEADLINE_DATE = "2026-10-11T23:59:59";
-  const CAMP_DATE = "2026-12-25T23:59:59";
-
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>({
-    months: 0,
-    days: 0,
-    hours: 0,
-    minutes: 0,
-  });
-  const [isDeadlinePassed, setIsDeadlinePassed] = useState(false);
-
-  useEffect(() => {
-    const deadline = new Date(DEADLINE_DATE);
-    const campDate = new Date(CAMP_DATE);
-
-    const calculateTimeLeft = () => {
-      const now = new Date();
-      const deadlineDifference = deadline.getTime() - now.getTime();
-      const campDifference = campDate.getTime() - now.getTime();
-
-      if (deadlineDifference > 0) {
-        // Use camp date for countdown display
-        const months = Math.floor(campDifference / (1000 * 60 * 60 * 24 * 30));
-        const days = Math.floor(
-          (campDifference % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24)
-        );
-        const hours = Math.floor(
-          (campDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor(
-          (campDifference % (1000 * 60 * 60)) / (1000 * 60)
-        );
-
-        setTimeLeft({ months, days, hours, minutes });
-        setIsDeadlinePassed(false);
-      } else {
-        setIsDeadlinePassed(true);
-      }
-    };
-
-    calculateTimeLeft();
-    const timer = setInterval(calculateTimeLeft, 60000); // Update every minute
-
-    return () => clearInterval(timer);
-  }, []);
-
   return (
     <main className="min-h-screen mt-10">
       {/* Hero Section with Background */}
@@ -79,81 +19,23 @@ export default function RegisterPage() {
 
         {/* Content */}
         <div className="relative z-10 text-center text-[#040149] mt-10 px-4 max-w-4xl mx-auto">
-          {!isDeadlinePassed ? (
-            <>
-              <motion.h1
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-5xl md:text-7xl font-bold mb-6 text-shadow-lg"
-              >
-                Regular Decision Deadline Extended!
-              </motion.h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-4xl md:text-6xl font-bold mb-6 text-shadow-lg text-white"
+          >
+            Applications for the 20th Buraq Space Camp have now closed.
+          </motion.h1>
 
-              <motion.h2
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-2xl md:text-3xl font-semibold mb-4"
-              >
-                The Regular Decision application period for the 20th Buraq
-                Space Camp has been extended.
-              </motion.h2>
-
-              <motion.h3
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-xl md:text-2xl font-medium mb-8 text-yellow-300"
-              >
-                Applications now close on 11 October 2026
-              </motion.h3>
-
-              {/* Countdown Timer */}
-              <div className="w-full max-w-2xl mx-auto px-4 mt-8">
-                <CountdownTimer
-                  targetDate={DEADLINE_DATE}
-                  className="mx-auto"
-                />
-              </div>
-
-              {/* Camp countdown label */}
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
-                className="text-xl md:text-2xl font-medium text-white mt-6"
-              >
-               Until Applications for the 20th Camp close
-              </motion.p>
-            </>
-          ) : (
-            <>
-              <motion.h1
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-6xl md:text-7xl font-bold mb-6 text-shadow-lg text-red-400"
-              >
-                Applications Closed!
-              </motion.h1>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-center max-w-3xl mx-auto"
-              >
-                <p className="text-2xl md:text-3xl font-semibold mb-4">
-                  Applications have ended for this year&apos;s camp. Thank you
-                  for your interest.
-                </p>
-                <p className="text-xl md:text-2xl font-medium text-yellow-300">
-                  Registration for the next camp starts in August-September.
-                </p>
-              </motion.div>
-            </>
-          )}
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-xl md:text-2xl font-medium text-yellow-300"
+          >
+            Registration for the next camp starts in August-September 2027.
+          </motion.p>
         </div>
       </section>
 
@@ -183,50 +65,12 @@ export default function RegisterPage() {
             viewport={{ once: true }}
             className="text-lg md:text-xl text-[#040149] leading-relaxed mb-8"
           >
-            Candidates aged 14 to 17, as of 25th December 2026, are encouraged
-            to apply for this prestigious opportunity to become part of our
-            esteemed society. To submit your application, you may complete the
-            form below, but for the best experience, please{" "}
-            <a
-              href="https://forms.gle/zozXpAoWvM2npmzq8"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 hover:text-blue-800 underline font-semibold"
-            >
-              click here
-            </a>
-            .
+            Thank you to everyone who applied. Applications are currently under
+            review, and shortlisted candidates will be contacted through their
+            registered email.
           </motion.p>
         </div>
       </section>
-
-      {/* Embedded Google Form Section - Only show if deadline hasn't passed */}
-      {!isDeadlinePassed && (
-        <section className="py-16 bg-white">
-          <div className="max-w-6xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="bg-gray-50 rounded-2xl p-4 shadow-lg"
-            >
-              <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSd-P78e6PlrKvaHqHr86uLeIj_jBxdyP7oec44fnVA1KtkCkw/viewform?embedded=true"
-                width="100%"
-                height="3000"
-                frameBorder="0"
-                marginHeight={0}
-                marginWidth={0}
-                className="rounded-xl"
-                title="Buraq Society Application Form"
-              >
-                Loading…
-              </iframe>
-            </motion.div>
-          </div>
-        </section>
-      )}
     </main>
   );
 }
