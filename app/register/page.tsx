@@ -4,10 +4,10 @@ import Image from "next/image";
 
 export default function RegisterPage() {
   return (
-    <main className="min-h-screen mt-10">
+    <main className="min-h-screen mt-20">
       {/* Hero Section with Background */}
       <section
-        className="relative min-h-[120vh] flex items-center justify-center bg-cover bg-center bg-no-repeat"
+        className="relative min-h-[calc(100svh-5rem)] flex items-center justify-center bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "url(/images/apply_now_cover.jpg)",
           backgroundSize: "cover",
@@ -18,7 +18,7 @@ export default function RegisterPage() {
         <div className="absolute inset-0 bg-black/50"></div>
 
         {/* Content */}
-        <div className="relative z-10 text-center text-[#040149] mt-10 px-4 max-w-4xl mx-auto">
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
